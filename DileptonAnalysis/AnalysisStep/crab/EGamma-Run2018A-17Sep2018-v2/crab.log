@@ -1,0 +1,20 @@
+DEBUG 2020-01-31 20:30:08.487 UTC: 	 Running on: Linux lxplus774.cern.ch 3.10.0-1062.9.1.el7.x86_64 #1 SMP Fri Dec 6 15:49:49 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-01-31 20:30:08.513 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-01-31 20:30:08.513 UTC: 	 Executing command: 'status'
+DEBUG 2020-01-31 20:30:08.513 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+ERROR 2020-01-31 20:30:08.514 UTC: 	 Cannot find .requestcache file in CRAB project directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/EGamma-Run2018A-17Sep2018-v2/crab_20200131_212823
+ERROR 2020-01-31 20:30:08.514 UTC: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/status.py", line 40, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 277, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 599, in validateOptions
+    self.loadLocalCache()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 461, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/EGamma-Run2018A-17Sep2018-v2/crab_20200131_212823

@@ -1,0 +1,18 @@
+DEBUG 2020-02-02 07:19:49.717 UTC: 	 Running on: Linux lxplus778.cern.ch 3.10.0-1062.9.1.el7.x86_64 #1 SMP Fri Dec 6 15:49:49 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-02-02 07:19:49.733 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-02-02 07:19:49.733 UTC: 	 Executing command: 'status'
+DEBUG 2020-02-02 07:19:49.735 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+ERROR 2020-02-02 07:19:49.737 UTC: 	 Error: crab_ is not a valid CRAB project directory.
+ERROR 2020-02-02 07:19:49.738 UTC: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/status.py", line 40, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 277, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 595, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab_ is not a valid CRAB project directory.

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+hadd /eos/cms/store/user/dsperka/Zdark/May23/DY50.root /eos/cms/store/user/dsperka/Zdark/May23/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/crab*/*/*/tree_*.root
+hadd /eos/cms/store/user/dsperka/Zdark/May23/DY5to50.root /eos/cms/store/user/dsperka/Zdark/May23/DYJetsToLL_M-5to50_TuneCP5_13TeV-madgraphMLM-pythia8/crab*/*/*/tree_*.root
+hadd /eos/cms/store/user/dsperka/Zdark/May23/DoubleEG.root /eos/cms/store/user/dsperka/Zdark/May23/DoubleEG/crab*/*/*/tree_*.root
+hadd /eos/cms/store/user/dsperka/Zdark/May23/SingleElectron.root /eos/cms/store/user/dsperka/Zdark/May23/SingleElectron/crab*/*/*/tree_*.root

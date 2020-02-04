@@ -1,0 +1,416 @@
+DEBUG 2019-05-10 17:16:33,437: 	 Executing command: 'submit'
+DEBUG 2019-05-10 17:16:33,437: 	 Found CRAB cache file /afs/cern.ch/user/d/dsperka/.crab3
+DEBUG 2019-05-10 17:16:33,447: 	 Checking credentials
+DEBUG 2019-05-10 17:16:33,448: 	 Found proxy file /tmp/x509up_u51940
+DEBUG 2019-05-10 17:16:33,448: 	 Getting proxy life time left
+DEBUG 2019-05-10 17:16:34,256: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u51940 -timeleft
+ output : 689488
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-10 17:16:34,963: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u51940 -actimeleft
+ output : 689488
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-10 17:16:34,963: 	 Proxy valid for 191:31:28 hours
+INFO 2019-05-10 17:16:34,963: 	 Will use CRAB configuration file crabConfig.py
+DEBUG 2019-05-10 17:16:34,963: 	 Loading CRAB configuration file.
+DEBUG 2019-05-10 17:16:34,972: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2019-05-10 17:16:35,175: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dsperka/CN=698850/CN=David Sperka
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-10 17:16:35,175: 	 Checking credentials
+DEBUG 2019-05-10 17:16:35,175: 	 Found proxy file /tmp/x509up_u51940
+DEBUG 2019-05-10 17:16:35,175: 	 Getting proxy life time left
+DEBUG 2019-05-10 17:16:35,885: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u51940 -timeleft
+ output : 689487
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-10 17:16:36,594: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u51940 -actimeleft
+ output : 689486
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-10 17:16:36,594: 	 Proxy lifetime 689487 secs is different from voms extension lifetime 689486 secs for proxy: /tmp/x509up_u51940
+DEBUG 2019-05-10 17:16:36,594: 	 Proxy valid for 191:31:26 hours
+DEBUG 2019-05-10 17:16:37,709: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u51940 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-10 17:16:37,788: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+DEBUG 2019-05-10 17:16:37,903: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dsperka/CN=698850/CN=David Sperka
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-10 17:16:37,904: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2019-05-10 17:16:37,904: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dsperka/CN=698850/CN=David Sperka_cmsweb.cern.ch for credential name
+DEBUG 2019-05-10 17:16:38,209: 	 Executing : 
+ command : myproxy-info -l a90adb9d478984ec2f7b39b4708f88008ef762ef -s myproxy.cern.ch
+ output : username: a90adb9d478984ec2f7b39b4708f88008ef762ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dsperka/CN=698850/CN=David Sperka
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  timeleft: 719:03:23  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-10 17:16:38,211: 	 Myproxy is valid: 2588603
+DEBUG 2019-05-10 17:16:38,211: 	 Command use: submit
+DEBUG 2019-05-10 17:16:38,211: 	 Options use: []
+DEBUG 2019-05-10 17:16:38,290: 	 CRABClient version: 3.3.1904
+DEBUG 2019-05-10 17:16:38,290: 	 Instance is prod
+DEBUG 2019-05-10 17:16:38,290: 	 Server base url is cmsweb.cern.ch
+DEBUG 2019-05-10 17:16:38,291: 	 Command url /crabserver/prod/workflow
+DEBUG 2019-05-10 17:16:38,291: 	 Started submission
+DEBUG 2019-05-10 17:16:38,291: 	 Working on /afs/cern.ch/work/d/dsperka/Zdark/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/crab_20190510_171634
+DEBUG 2019-05-10 17:16:38,377: 	 Loading required information from the environment
+DEBUG 2019-05-10 17:16:38,377: 	 Found CMSSW_10_2_3 for slc7_amd64_gcc700 with base /afs/cern.ch/work/d/dsperka/Zdark/CMSSW_10_2_3
+DEBUG 2019-05-10 17:16:38,377: 	 Loading required information from the environment
+DEBUG 2019-05-10 17:16:38,377: 	 Found CMSSW_10_2_3 for slc7_amd64_gcc700 with base /afs/cern.ch/work/d/dsperka/Zdark/CMSSW_10_2_3
+DEBUG 2019-05-10 17:16:38,400: 	 UNIQUE NAME: tarUUID 13b8b0e6-acce-474d-befc-e397aebc160c 
+DEBUG 2019-05-10 17:16:38,401: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.section_('JobType')
+config.JobType.psetName = '../../test/tree_cfg.py'
+config.JobType.pluginName = 'Analysis'
+config.JobType.pyCfgParams = ['isMC=True', 'useWeights=True', 'xsec=1.0']
+config.JobType.allowUndistributedCMSSW = True
+config.section_('Data')
+config.Data.inputDataset = '/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM'
+config.Data.unitsPerJob = 50000
+config.Data.splitting = 'EventAwareLumiBased'
+config.Data.outLFNDirBase = '/store/user/dsperka/Zdark/May10_2018/'
+config.section_('Site')
+config.Site.storageSite = 'T2_CH_CERN'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2019-05-10 17:16:38,401: 	 self.config.JobType.psetName: ../../test/tree_cfg.py
+INFO 2019-05-10 17:16:38,401: 	 Importing CMSSW configuration ../../test/tree_cfg.py
+DEBUG 2019-05-10 17:16:38,401: 	 Additional parameters for the CMSSW configuration are: ['isMC=True', 'useWeights=True', 'xsec=1.0']
+INFO 2019-05-10 17:16:39,282: 	 Finished importing CMSSW configuration ../../test/tree_cfg.py
+DEBUG 2019-05-10 17:16:39,282: 	 Writing CMSSW configuration to /afs/cern.ch/work/d/dsperka/Zdark/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/crab_20190510_171634/inputs/PSet.py
+DEBUG 2019-05-10 17:16:39,435: 	 The following EDM output files will be collected: []
+DEBUG 2019-05-10 17:16:39,435: 	 The following TFile output files will be collected: ['tree.root']
+DEBUG 2019-05-10 17:16:39,435: 	 The following user output files will be collected: []
+DEBUG 2019-05-10 17:16:39,435: 	 Loading required information from the environment
+DEBUG 2019-05-10 17:16:39,435: 	 Found CMSSW_10_2_3 for slc7_amd64_gcc700 with base /afs/cern.ch/work/d/dsperka/Zdark/CMSSW_10_2_3
+DEBUG 2019-05-10 17:16:39,435: 	 Making tarball in /afs/cern.ch/work/d/dsperka/Zdark/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/crab_20190510_171634/inputs/13b8b0e6-acce-474d-befc-e397aebc160cdefault.tgz
+DEBUG 2019-05-10 17:16:39,436: 	 Checking directory /afs/cern.ch/work/d/dsperka/Zdark/CMSSW_10_2_3/lib
+DEBUG 2019-05-10 17:16:39,436: 	 Adding directory /afs/cern.ch/work/d/dsperka/Zdark/CMSSW_10_2_3/lib to tarball
+DEBUG 2019-05-10 17:16:39,451: 	 Checking directory /afs/cern.ch/work/d/dsperka/Zdark/CMSSW_10_2_3/biglib
+DEBUG 2019-05-10 17:16:39,451: 	 Adding directory /afs/cern.ch/work/d/dsperka/Zdark/CMSSW_10_2_3/biglib to tarball
+DEBUG 2019-05-10 17:16:39,452: 	 Checking directory /afs/cern.ch/work/d/dsperka/Zdark/CMSSW_10_2_3/module
+DEBUG 2019-05-10 17:16:39,458: 	 Adding data directory /afs/cern.ch/work/d/dsperka/Zdark/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/data to tarball
+DEBUG 2019-05-10 17:16:40,074: 	 Adding data directory /afs/cern.ch/work/d/dsperka/Zdark/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/interface to tarball
+DEBUG 2019-05-10 17:16:40,140: 	 Uploading archive /afs/cern.ch/work/d/dsperka/Zdark/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/crab_20190510_171634/inputs/13b8b0e6-acce-474d-befc-e397aebc160cdefault.tgz (1.077148.1 MB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2019-05-10 17:16:41,518: 	 Loading required information from the environment
+DEBUG 2019-05-10 17:16:41,518: 	 Found CMSSW_10_2_3 for slc7_amd64_gcc700 with base /afs/cern.ch/work/d/dsperka/Zdark/CMSSW_10_2_3
+DEBUG 2019-05-10 17:16:41,518: 	 Making tarball in /afs/cern.ch/work/d/dsperka/Zdark/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/crab_20190510_171634/inputs/debugFiles.tgz
+DEBUG 2019-05-10 17:16:41,530: 	 Uploading archive /afs/cern.ch/work/d/dsperka/Zdark/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/crab_20190510_171634/inputs/debugFiles.tgz (4 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2019-05-10 17:16:41,602: 	 Result uploading input files: 3cc2dcf11219172f745f236f1836f4e2d21919726a3b13b4971fce62b9798b49.tar.gz 
+WARNING 2019-05-10 17:16:41,603: 	 Warning: The following output files will not be published, as they are not EDM files: ['tree.root']
+INFO 2019-05-10 17:16:41,603: 	 Sending the request to the server
+DEBUG 2019-05-10 17:16:41,603: 	 Submitting {'maxjobruntime': 1250, 'extrajdl': [], 'ignorelocality': 0, 'savelogsflag': 0, 'useparent': 0, 'asyncdest': 'T2_CH_CERN', 'algoargs': 50000, 'cachefilename': '3cc2dcf11219172f745f236f1836f4e2d21919726a3b13b4971fce62b9798b49.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 2000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_10_2_3', 'edmoutfiles': [], 'userfiles': [], 'primarydataset': '', 'inputdata': '/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM', 'lfn': '/store/user/dsperka/Zdark/May10_2018/', 'dryrun': 0, 'workflow': 'crab_20190510_171634', 'cacheurl': u'https://cmsweb.cern.ch/crabcache', 'nonprodsw': 1, 'tfileoutfiles': ['tree.root'], 'oneEventMode': 0, 'debugfilename': '761ce660822a63b3ca05897c1edd897b81eb920cf0dd0c5cf691112a6679fa43.tar.gz', 'saveoutput': 1, 'publication': 1, 'jobarch': 'slc7_amd64_gcc700', 'totalunits': 0, 'splitalgo': 'EventAwareLumiBased', 'ignoreglobalblacklist': 0, 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'publishgroupname': 0, 'jobtype': 'Analysis', 'publishname2': ''} 
+DEBUG 2019-05-10 17:16:41,603: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=0&savelogsflag=0&useparent=0&asyncdest=T2_CH_CERN&algoargs=50000&cachefilename=3cc2dcf11219172f745f236f1836f4e2d21919726a3b13b4971fce62b9798b49.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_10_2_3&primarydataset=&inputdata=%2FDYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8%2FRunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1%2FMINIAODSIM&lfn=%2Fstore%2Fuser%2Fdsperka%2FZdark%2FMay10_2018%2F&dryrun=0&workflow=crab_20190510_171634&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&nonprodsw=1&oneEventMode=0&debugfilename=761ce660822a63b3ca05897c1edd897b81eb920cf0dd0c5cf691112a6679fa43.tar.gz&saveoutput=1&publication=1&jobarch=slc7_amd64_gcc700&totalunits=0&splitalgo=EventAwareLumiBased&ignoreglobalblacklist=0&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=&tfileoutfiles=tree.root
+DEBUG 2019-05-10 17:16:41,701: 	 Result: {u'result': [{u'RequestName': u'190510_151641:dsperka_crab_20190510_171634'}]}
+INFO 2019-05-10 17:16:41,703: 	 Success: Your task has been delivered to the CRAB3 server.
+INFO 2019-05-10 17:16:41,703: 	 Task name: 190510_151641:dsperka_crab_20190510_171634
+INFO 2019-05-10 17:16:41,704: 	 Project dir: ./crab_20190510_171634
+INFO 2019-05-10 17:16:41,704: 	 Please use 'crab status -d ./crab_20190510_171634' to check how the submission process proceeds.
+DEBUG 2019-05-10 17:16:41,704: 	 About to return
+INFO 2019-05-10 17:16:41,707: 	 Log file is /afs/cern.ch/work/d/dsperka/Zdark/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/crab_20190510_171634/crab.log
+DEBUG 2019-05-10 17:34:35,362: 	 Executing command: 'status'
+DEBUG 2019-05-10 17:34:35,362: 	 Found CRAB cache file /afs/cern.ch/user/d/dsperka/.crab3
+DEBUG 2019-05-10 17:34:35,374: 	 Checking credentials
+DEBUG 2019-05-10 17:34:35,374: 	 Found proxy file /tmp/x509up_u51940
+DEBUG 2019-05-10 17:34:35,374: 	 Getting proxy life time left
+DEBUG 2019-05-10 17:34:36,080: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u51940 -timeleft
+ output : 688406
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-10 17:34:36,787: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u51940 -actimeleft
+ output : 688406
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-10 17:34:36,787: 	 Proxy valid for 191:13:26 hours
+DEBUG 2019-05-10 17:34:36,981: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dsperka/CN=698850/CN=David Sperka
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-10 17:34:36,982: 	 Checking credentials
+DEBUG 2019-05-10 17:34:36,982: 	 Found proxy file /tmp/x509up_u51940
+DEBUG 2019-05-10 17:34:36,982: 	 Getting proxy life time left
+DEBUG 2019-05-10 17:34:37,789: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u51940 -timeleft
+ output : 688405
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-10 17:34:38,496: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u51940 -actimeleft
+ output : 688404
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-10 17:34:38,496: 	 Proxy lifetime 688405 secs is different from voms extension lifetime 688404 secs for proxy: /tmp/x509up_u51940
+DEBUG 2019-05-10 17:34:38,496: 	 Proxy valid for 191:13:24 hours
+DEBUG 2019-05-10 17:34:38,682: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+DEBUG 2019-05-10 17:34:38,795: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dsperka/CN=698850/CN=David Sperka
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-10 17:34:38,795: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2019-05-10 17:34:38,795: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dsperka/CN=698850/CN=David Sperka_cmsweb.cern.ch for credential name
+DEBUG 2019-05-10 17:34:39,101: 	 Executing : 
+ command : myproxy-info -l a90adb9d478984ec2f7b39b4708f88008ef762ef -s myproxy.cern.ch
+ output : username: a90adb9d478984ec2f7b39b4708f88008ef762ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dsperka/CN=698850/CN=David Sperka
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  timeleft: 718:45:22  (29.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-10 17:34:39,102: 	 Myproxy is valid: 2587522
+DEBUG 2019-05-10 17:34:39,103: 	 Command use: status
+DEBUG 2019-05-10 17:34:39,103: 	 Options use: ['-d', 'crab_20190510_171634/']
+DEBUG 2019-05-10 17:34:39,225: 	 CRABClient version: 3.3.1904
+DEBUG 2019-05-10 17:34:39,225: 	 Instance is prod
+DEBUG 2019-05-10 17:34:39,225: 	 Server base url is cmsweb.cern.ch
+DEBUG 2019-05-10 17:34:39,225: 	 Command url /crabserver/prod/workflow
+DEBUG 2019-05-10 17:34:39,320: 	 Got information from server oracle database: {u'result': [u'190510_151641:dsperka_crab_20190510_171634', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2019-05-10 15:16:41.687688', u'None', u'2019-05-10 15:20:23.861068', u'None', u'CMSSW_10_2_3', u'slc7_amd64_gcc700', u'/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM', u'F', u'0', u'[]', u'[]', u'EventAwareLumiBased', u"{'splitOnRun': False, 'events_per_job': 50000, 'halt_job_on_file_boundaries': False, 'runs': [], 'lumis': []}", u'3cc2dcf11219172f745f236f1836f4e2d21919726a3b13b4971fce62b9798b49.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'dsperka', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dsperka/CN=698850/CN=David Sperka', u'cms', u'None', u'None', u'crab_20190510_171634-00000000000000000000000000000000', u'F', u'T2_CH_CERN', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u'[]', u"['tree.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'F', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0195.cern.ch/mon/cms1605/190510_151641:dsperka_crab_20190510_171634', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv221.fnal.gov:9620', u'crab3@vocms0195.cern.ch', u'F', u'[]', u'T', u'/store/user/dsperka/Zdark/May10_2018/', u'F', u'None', u'F', u'None', u'DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8', u'None', u'761ce660822a63b3ca05897c1edd897b81eb920cf0dd0c5cf691112a6679fa43.tar.gz', u'37154026', u'filetransfers', u'F', u'2001:1458:d00:2f::100:4f', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2019-05-10 17:34:39,321: 	 CRAB project directory:		/afs/cern.ch/work/d/dsperka/Zdark/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/crab_20190510_171634
+INFO 2019-05-10 17:34:39,321: 	 Task name:			190510_151641:dsperka_crab_20190510_171634
+INFO 2019-05-10 17:34:39,321: 	 Grid scheduler - Task Worker:	crab3@vocms0195.cern.ch - crab-prod-tw01
+INFO 2019-05-10 17:34:39,321: 	 Status on the CRAB server:	SUBMITTED
+INFO 2019-05-10 17:34:39,322: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/190510_151641%3Adsperka_crab_20190510_171634
+INFO 2019-05-10 17:34:39,322: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=dsperka&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=190510_151641%3Adsperka_crab_20190510_171634
+INFO 2019-05-10 17:34:39,322: 	 New dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=dsperka&var-task=190510_151641%3Adsperka_crab_20190510_171634
+INFO 2019-05-10 17:34:39,322: 	 In case of issues with the new dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2019-05-10 17:34:39,322: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 37154026)
+DEBUG 2019-05-10 17:34:39,322: 	 Webdir is located at http://vocms0195.cern.ch/mon/cms1605/190510_151641:dsperka_crab_20190510_171634
+DEBUG 2019-05-10 17:34:39,427: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0195/cms1605/190510_151641:dsperka_crab_20190510_171634
+DEBUG 2019-05-10 17:34:39,427: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0195/cms1605/190510_151641:dsperka_crab_20190510_171634/status_cache
+DEBUG 2019-05-10 17:34:39,481: 	 Got information from status cache file: {'11': {'Retries': 0, 'WallDurations': [8.0, 308.0], 'StartTimes': [1557501874.0], 'SubmitTimes': [1557501640.0], 'JobIds': ['37154038.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [878072], 'TotalUserCpuTimeHistory': [85.0], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [7.0]}, '10': {'Retries': 0, 'WallDurations': [9.0, 310.0], 'StartTimes': [1557501886.0], 'SubmitTimes': [1557501639.0], 'JobIds': ['37154037.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [899148], 'TotalUserCpuTimeHistory': [82.0], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [4.0]}, '13': {'Retries': 0, 'WallDurations': [8.0, 308.0], 'StartTimes': [1557501870.0], 'SubmitTimes': [1557501640.0], 'JobIds': ['37154040.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [927592], 'TotalUserCpuTimeHistory': [49.0], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [3.0]}, '12': {'Retries': 0, 'WallDurations': [8.0, 308.0], 'StartTimes': [1557501871.0], 'SubmitTimes': [1557501640.0], 'JobIds': ['37154039.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [936632], 'TotalUserCpuTimeHistory': [99.0], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [4.0]}, '15': {'Retries': 0, 'WallDurations': [9.0, 309.0], 'StartTimes': [1557501876.0], 'SubmitTimes': [1557501641.0], 'JobIds': ['37154045.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [948932], 'TotalUserCpuTimeHistory': [86.0], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [3.0]}, '14': {'Retries': 0, 'WallDurations': [9.0, 310.0], 'StartTimes': [1557501874.0], 'SubmitTimes': [1557501640.0], 'JobIds': ['37154041.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [888860], 'TotalUserCpuTimeHistory': [119.0], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [8.0]}, '17': {'Retries': 0, 'WallDurations': [9.0, 309.0], 'StartTimes': [1557501870.0], 'SubmitTimes': [1557501641.0], 'JobIds': ['37154043.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [947976], 'TotalUserCpuTimeHistory': [57.0], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [3.0]}, '16': {'Retries': 0, 'WallDurations': [9.0, 311.0], 'StartTimes': [1557501877.0], 'SubmitTimes': [1557501641.0], 'JobIds': ['37154042.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [885812], 'TotalUserCpuTimeHistory': [111.0], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [4.0]}, '19': {'Retries': 0, 'WallDurations': [9.0, 310.0], 'StartTimes': [1557501872.0], 'SubmitTimes': [1557501641.0], 'JobIds': ['37154044.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [891152], 'TotalUserCpuTimeHistory': [97.0], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [6.0]}, '18': {'Retries': 0, 'WallDurations': [8.0, 308.0], 'StartTimes': [1557501871.0], 'SubmitTimes': [1557501642.0], 'JobIds': ['37154047.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [936616], 'TotalUserCpuTimeHistory': [60.0], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [3.0]}, '1': {'Retries': 0, 'WallDurations': [9.0, 310.0], 'StartTimes': [1557501884.0], 'SubmitTimes': [1557501637.0], 'JobIds': ['37154029.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [882056], 'TotalUserCpuTimeHistory': [147.0], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [6.0]}, '3': {'Retries': 0, 'WallDurations': [8.0, 308.0], 'StartTimes': [1557501878.0], 'SubmitTimes': [1557501637.0], 'JobIds': ['37154028.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [887236], 'TotalUserCpuTimeHistory': [105.0], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [4.0]}, '2': {'Retries': 0, 'WallDurations': [9.0, 310.0], 'StartTimes': [1557501881.0], 'SubmitTimes': [1557501638.0], 'JobIds': ['37154031.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [945200], 'TotalUserCpuTimeHistory': [81.0], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [3.0]}, '5': {'Retries': 0, 'WallDurations': [9.0, 309.0], 'StartTimes': [1557501882.0], 'SubmitTimes': [1557501639.0], 'JobIds': ['37154034.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [951828], 'TotalUserCpuTimeHistory': [63.0], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [3.0]}, '4': {'Retries': 0, 'WallDurations': [9.0, 310.0], 'StartTimes': [1557501885.0], 'SubmitTimes': [1557501638.0], 'JobIds': ['37154030.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [889612], 'TotalUserCpuTimeHistory': [66.0], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [5.0]}, '7': {'Retries': 0, 'WallDurations': [9.0, 310.0], 'StartTimes': [1557501874.0], 'SubmitTimes': [1557501638.0], 'JobIds': ['37154033.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [921960], 'TotalUserCpuTimeHistory': [126.0], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [5.0]}, '6': {'Retries': 0, 'WallDurations': [9.0, 309.0], 'StartTimes': [1557501876.0], 'SubmitTimes': [1557501638.0], 'JobIds': ['37154032.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [887172], 'TotalUserCpuTimeHistory': [108.0], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [5.0]}, '9': {'Retries': 0, 'WallDurations': [9.0, 309.0], 'StartTimes': [1557501875.0], 'SubmitTimes': [1557501639.0], 'JobIds': ['37154035.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [892968], 'TotalUserCpuTimeHistory': [115.0], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [7.0]}, '20': {'Retries': 0, 'WallDurations': [9.0, 309.0], 'StartTimes': [1557501877.0], 'SubmitTimes': [1557501642.0], 'JobIds': ['37154046.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [961768], 'TotalUserCpuTimeHistory': [107.0], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [6.0]}, '8': {'Retries': 0, 'WallDurations': [9.0, 309.0], 'StartTimes': [1557501869.0], 'SubmitTimes': [1557501639.0], 'JobIds': ['37154036.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [928580], 'TotalUserCpuTimeHistory': [39.0], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [2.0]}}
+INFO 2019-05-10 17:34:39,482: 	 Status on the scheduler:	SUBMITTED
+INFO 2019-05-10 17:34:39,482: 	 
+Jobs status:                    running      		100.0% (20/20)
+INFO 2019-05-10 17:34:39,482: 	 
+No publication information available yet
+INFO 2019-05-10 17:34:39,491: 	 Log file is /afs/cern.ch/work/d/dsperka/Zdark/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/crab_20190510_171634/crab.log
+DEBUG 2019-05-10 17:45:45,518: 	 Executing command: 'status'
+DEBUG 2019-05-10 17:45:45,518: 	 Found CRAB cache file /afs/cern.ch/user/d/dsperka/.crab3
+DEBUG 2019-05-10 17:45:45,530: 	 Checking credentials
+DEBUG 2019-05-10 17:45:45,530: 	 Found proxy file /tmp/x509up_u51940
+DEBUG 2019-05-10 17:45:45,530: 	 Getting proxy life time left
+DEBUG 2019-05-10 17:45:46,236: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u51940 -timeleft
+ output : 687736
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-10 17:45:46,949: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u51940 -actimeleft
+ output : 687736
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-10 17:45:46,950: 	 Proxy valid for 191:02:16 hours
+DEBUG 2019-05-10 17:45:48,329: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dsperka/CN=698850/CN=David Sperka
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-10 17:45:48,329: 	 Checking credentials
+DEBUG 2019-05-10 17:45:48,329: 	 Found proxy file /tmp/x509up_u51940
+DEBUG 2019-05-10 17:45:48,329: 	 Getting proxy life time left
+DEBUG 2019-05-10 17:45:49,035: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u51940 -timeleft
+ output : 687734
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-10 17:45:49,743: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u51940 -actimeleft
+ output : 687733
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-10 17:45:49,744: 	 Proxy lifetime 687734 secs is different from voms extension lifetime 687733 secs for proxy: /tmp/x509up_u51940
+DEBUG 2019-05-10 17:45:49,744: 	 Proxy valid for 191:02:13 hours
+DEBUG 2019-05-10 17:45:49,852: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+DEBUG 2019-05-10 17:45:49,965: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dsperka/CN=698850/CN=David Sperka
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-10 17:45:49,965: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2019-05-10 17:45:49,965: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dsperka/CN=698850/CN=David Sperka_cmsweb.cern.ch for credential name
+DEBUG 2019-05-10 17:45:50,270: 	 Executing : 
+ command : myproxy-info -l a90adb9d478984ec2f7b39b4708f88008ef762ef -s myproxy.cern.ch
+ output : username: a90adb9d478984ec2f7b39b4708f88008ef762ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dsperka/CN=698850/CN=David Sperka
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  timeleft: 718:34:11  (29.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-10 17:45:50,271: 	 Myproxy is valid: 2586851
+DEBUG 2019-05-10 17:45:50,272: 	 Command use: status
+DEBUG 2019-05-10 17:45:50,272: 	 Options use: ['-d', 'crab_20190510_171634/']
+DEBUG 2019-05-10 17:45:50,357: 	 CRABClient version: 3.3.1904
+DEBUG 2019-05-10 17:45:50,357: 	 Instance is prod
+DEBUG 2019-05-10 17:45:50,357: 	 Server base url is cmsweb.cern.ch
+DEBUG 2019-05-10 17:45:50,357: 	 Command url /crabserver/prod/workflow
+DEBUG 2019-05-10 17:45:50,434: 	 Got information from server oracle database: {u'result': [u'190510_151641:dsperka_crab_20190510_171634', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2019-05-10 15:16:41.687688', u'None', u'2019-05-10 15:20:23.861068', u'None', u'CMSSW_10_2_3', u'slc7_amd64_gcc700', u'/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM', u'F', u'0', u'[]', u'[]', u'EventAwareLumiBased', u"{'splitOnRun': False, 'events_per_job': 50000, 'halt_job_on_file_boundaries': False, 'runs': [], 'lumis': []}", u'3cc2dcf11219172f745f236f1836f4e2d21919726a3b13b4971fce62b9798b49.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'dsperka', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dsperka/CN=698850/CN=David Sperka', u'cms', u'None', u'None', u'crab_20190510_171634-00000000000000000000000000000000', u'F', u'T2_CH_CERN', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u'[]', u"['tree.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'F', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0195.cern.ch/mon/cms1605/190510_151641:dsperka_crab_20190510_171634', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv221.fnal.gov:9620', u'crab3@vocms0195.cern.ch', u'F', u'[]', u'T', u'/store/user/dsperka/Zdark/May10_2018/', u'F', u'None', u'F', u'None', u'DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8', u'None', u'761ce660822a63b3ca05897c1edd897b81eb920cf0dd0c5cf691112a6679fa43.tar.gz', u'37154026', u'filetransfers', u'F', u'2001:1458:d00:2f::100:4f', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2019-05-10 17:45:50,434: 	 CRAB project directory:		/afs/cern.ch/work/d/dsperka/Zdark/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/crab_20190510_171634
+INFO 2019-05-10 17:45:50,434: 	 Task name:			190510_151641:dsperka_crab_20190510_171634
+INFO 2019-05-10 17:45:50,435: 	 Grid scheduler - Task Worker:	crab3@vocms0195.cern.ch - crab-prod-tw01
+INFO 2019-05-10 17:45:50,435: 	 Status on the CRAB server:	SUBMITTED
+INFO 2019-05-10 17:45:50,435: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/190510_151641%3Adsperka_crab_20190510_171634
+INFO 2019-05-10 17:45:50,435: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=dsperka&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=190510_151641%3Adsperka_crab_20190510_171634
+INFO 2019-05-10 17:45:50,435: 	 New dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=dsperka&var-task=190510_151641%3Adsperka_crab_20190510_171634
+INFO 2019-05-10 17:45:50,435: 	 In case of issues with the new dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2019-05-10 17:45:50,435: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 37154026)
+DEBUG 2019-05-10 17:45:50,435: 	 Webdir is located at http://vocms0195.cern.ch/mon/cms1605/190510_151641:dsperka_crab_20190510_171634
+DEBUG 2019-05-10 17:45:50,541: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0195/cms1605/190510_151641:dsperka_crab_20190510_171634
+DEBUG 2019-05-10 17:45:50,541: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0195/cms1605/190510_151641:dsperka_crab_20190510_171634/status_cache
+DEBUG 2019-05-10 17:45:50,592: 	 Got information from status cache file: {'11': {'Retries': 0, 'WallDurations': [8.0, 764.0], 'StartTimes': [1557501874.0], 'SubmitTimes': [1557501640.0], 'JobIds': ['37154038.0'], 'EndTimes': [1557502638.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [918744], 'TotalUserCpuTimeHistory': [444], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [20]}, '10': {'Retries': 0, 'WallDurations': [9.0, 994.0], 'StartTimes': [1557501886.0], 'SubmitTimes': [1557501639.0], 'JobIds': ['37154037.0'], 'EndTimes': [1557502880.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [989000], 'TotalUserCpuTimeHistory': [528], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [15]}, '13': {'Retries': 0, 'WallDurations': [8.0, 722.0], 'StartTimes': [1557501870.0], 'SubmitTimes': [1557501640.0], 'JobIds': ['37154040.0'], 'EndTimes': [1557502592.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [929040], 'TotalUserCpuTimeHistory': [281], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [10]}, '12': {'Retries': 0, 'WallDurations': [8.0, 908.0], 'StartTimes': [1557501871.0], 'SubmitTimes': [1557501640.0], 'JobIds': ['37154039.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [976284], 'TotalUserCpuTimeHistory': [498.0], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [14.0]}, '15': {'Retries': 0, 'WallDurations': [9.0, 745.0], 'StartTimes': [1557501876.0], 'SubmitTimes': [1557501641.0], 'JobIds': ['37154045.0'], 'EndTimes': [1557502621.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [949680], 'TotalUserCpuTimeHistory': [306], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [10]}, '14': {'Retries': 0, 'WallDurations': [9.0, 775.0], 'StartTimes': [1557501874.0], 'SubmitTimes': [1557501640.0], 'JobIds': ['37154041.0'], 'EndTimes': [1557502649.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [899784], 'TotalUserCpuTimeHistory': [511], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [18]}, '17': {'Retries': 0, 'WallDurations': [9.0, 593.0], 'StartTimes': [1557501870.0], 'SubmitTimes': [1557501641.0], 'JobIds': ['37154043.0'], 'EndTimes': [1557502463.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [947976], 'TotalUserCpuTimeHistory': [259], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [8]}, '16': {'Retries': 0, 'WallDurations': [9.0, 648.0], 'StartTimes': [1557501877.0], 'SubmitTimes': [1557501641.0], 'JobIds': ['37154042.0'], 'EndTimes': [1557502525.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [885812], 'TotalUserCpuTimeHistory': [407], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [10]}, '19': {'Retries': 0, 'WallDurations': [9.0, 733.0], 'StartTimes': [1557501872.0], 'SubmitTimes': [1557501641.0], 'JobIds': ['37154044.0'], 'EndTimes': [1557502605.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [891152], 'TotalUserCpuTimeHistory': [442], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [19]}, '18': {'Retries': 0, 'WallDurations': [8.0, 662.0], 'StartTimes': [1557501871.0], 'SubmitTimes': [1557501642.0], 'JobIds': ['37154047.0'], 'EndTimes': [1557502533.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [959784], 'TotalUserCpuTimeHistory': [277], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [8]}, '1': {'Retries': 0, 'WallDurations': [9.0, 626.0], 'StartTimes': [1557501884.0], 'SubmitTimes': [1557501637.0], 'JobIds': ['37154029.0'], 'EndTimes': [1557502510.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [894000], 'TotalUserCpuTimeHistory': [418], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [12]}, '3': {'Retries': 0, 'WallDurations': [8.0, 739.0], 'StartTimes': [1557501878.0], 'SubmitTimes': [1557501637.0], 'JobIds': ['37154028.0'], 'EndTimes': [1557502617.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [887236], 'TotalUserCpuTimeHistory': [479], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [12]}, '2': {'Retries': 0, 'WallDurations': [9.0, 647.0], 'StartTimes': [1557501881.0], 'SubmitTimes': [1557501638.0], 'JobIds': ['37154031.0'], 'EndTimes': [1557502528.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [993212], 'TotalUserCpuTimeHistory': [308], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [9]}, '5': {'Retries': 0, 'WallDurations': [9.0, 694.0], 'StartTimes': [1557501882.0], 'SubmitTimes': [1557501639.0], 'JobIds': ['37154034.0'], 'EndTimes': [1557502576.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [975368], 'TotalUserCpuTimeHistory': [301], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [10]}, '4': {'Retries': 0, 'WallDurations': [9.0, 796.0], 'StartTimes': [1557501885.0], 'SubmitTimes': [1557501638.0], 'JobIds': ['37154030.0'], 'EndTimes': [1557502681.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [915664], 'TotalUserCpuTimeHistory': [468], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [15]}, '7': {'Retries': 0, 'WallDurations': [9.0, 660.0], 'StartTimes': [1557501874.0], 'SubmitTimes': [1557501638.0], 'JobIds': ['37154033.0'], 'EndTimes': [1557502534.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [921960], 'TotalUserCpuTimeHistory': [418], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [13]}, '6': {'Retries': 0, 'WallDurations': [9.0, 750.0], 'StartTimes': [1557501876.0], 'SubmitTimes': [1557501638.0], 'JobIds': ['37154032.0'], 'EndTimes': [1557502626.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [900420], 'TotalUserCpuTimeHistory': [426], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [15]}, '9': {'Retries': 0, 'WallDurations': [9.0, 736.0], 'StartTimes': [1557501875.0], 'SubmitTimes': [1557501639.0], 'JobIds': ['37154035.0'], 'EndTimes': [1557502611.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [892968], 'TotalUserCpuTimeHistory': [491], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [15]}, '20': {'Retries': 0, 'WallDurations': [9.0, 686.0], 'StartTimes': [1557501877.0], 'SubmitTimes': [1557501642.0], 'JobIds': ['37154046.0'], 'EndTimes': [1557502563.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [970344], 'TotalUserCpuTimeHistory': [371], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [17]}, '8': {'Retries': 0, 'WallDurations': [9.0, 716.0], 'StartTimes': [1557501869.0], 'SubmitTimes': [1557501639.0], 'JobIds': ['37154036.0'], 'EndTimes': [1557502585.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1031484], 'TotalUserCpuTimeHistory': [251], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [9]}}
+INFO 2019-05-10 17:45:50,592: 	 Status on the scheduler:	SUBMITTED
+INFO 2019-05-10 17:45:50,593: 	 
+Jobs status:                    running      		  5.0% ( 1/20)
+INFO 2019-05-10 17:45:50,593: 	 				transferring 		 95.0% (19/20)
+INFO 2019-05-10 17:45:50,593: 	 
+No publication information available yet
+INFO 2019-05-10 17:45:50,594: 	 
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2019-05-10 17:45:50,594: 	 
+Summary of run jobs:
+ * Memory: 947MB min, 1007MB max, 913MB ave
+ * Runtime: 0:09:53 min, 0:16:34 max, 0:12:00 ave
+ * CPU eff: 36% min, 69% max, 56% ave
+ * Waste: 0:02:47 (1% of total)
+
+INFO 2019-05-10 17:45:50,603: 	 Log file is /afs/cern.ch/work/d/dsperka/Zdark/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/crab_20190510_171634/crab.log
+DEBUG 2019-05-14 21:26:48,766: 	 Executing command: 'status'
+DEBUG 2019-05-14 21:26:48,767: 	 Found CRAB cache file /afs/cern.ch/user/d/dsperka/.crab3
+DEBUG 2019-05-14 21:26:48,790: 	 Checking credentials
+DEBUG 2019-05-14 21:26:48,790: 	 Found proxy file /tmp/x509up_u51940
+DEBUG 2019-05-14 21:26:48,790: 	 Getting proxy life time left
+DEBUG 2019-05-14 21:26:49,395: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u51940 -timeleft
+ output : 86390
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-14 21:26:50,004: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u51940 -actimeleft
+ output : 86390
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-14 21:26:50,004: 	 Proxy valid for 23:59:50 hours
+DEBUG 2019-05-14 21:26:50,480: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dsperka/CN=698850/CN=David Sperka
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-14 21:26:50,480: 	 Checking credentials
+DEBUG 2019-05-14 21:26:50,481: 	 Found proxy file /tmp/x509up_u51940
+DEBUG 2019-05-14 21:26:50,481: 	 Getting proxy life time left
+DEBUG 2019-05-14 21:26:51,187: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u51940 -timeleft
+ output : 86388
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-14 21:26:51,893: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u51940 -actimeleft
+ output : 86388
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-14 21:26:51,893: 	 Proxy valid for 23:59:48 hours
+DEBUG 2019-05-14 21:26:51,992: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+DEBUG 2019-05-14 21:26:52,104: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dsperka/CN=698850/CN=David Sperka
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-14 21:26:52,104: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2019-05-14 21:26:52,104: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dsperka/CN=698850/CN=David Sperka_cmsweb.cern.ch for credential name
+DEBUG 2019-05-14 21:26:52,509: 	 Executing : 
+ command : myproxy-info -l a90adb9d478984ec2f7b39b4708f88008ef762ef -s myproxy.cern.ch
+ output : username: a90adb9d478984ec2f7b39b4708f88008ef762ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dsperka/CN=698850/CN=David Sperka
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  timeleft: 618:53:09  (25.8 days)
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-14 21:26:52,510: 	 Myproxy is valid: 2227989
+DEBUG 2019-05-14 21:26:52,511: 	 Command use: status
+DEBUG 2019-05-14 21:26:52,511: 	 Options use: ['-d', 'crab_20190510_171634/']
+DEBUG 2019-05-14 21:26:52,601: 	 CRABClient version: 3.3.1904
+DEBUG 2019-05-14 21:26:52,601: 	 Instance is prod
+DEBUG 2019-05-14 21:26:52,601: 	 Server base url is cmsweb.cern.ch
+DEBUG 2019-05-14 21:26:52,601: 	 Command url /crabserver/prod/workflow
+DEBUG 2019-05-14 21:26:52,769: 	 Got information from server oracle database: {u'result': [u'190510_151641:dsperka_crab_20190510_171634', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2019-05-10 15:16:41.687688', u'None', u'2019-05-10 15:20:23.861068', u'None', u'CMSSW_10_2_3', u'slc7_amd64_gcc700', u'/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM', u'F', u'0', u'[]', u'[]', u'EventAwareLumiBased', u"{'splitOnRun': False, 'events_per_job': 50000, 'halt_job_on_file_boundaries': False, 'runs': [], 'lumis': []}", u'3cc2dcf11219172f745f236f1836f4e2d21919726a3b13b4971fce62b9798b49.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'dsperka', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dsperka/CN=698850/CN=David Sperka', u'cms', u'None', u'None', u'crab_20190510_171634-00000000000000000000000000000000', u'F', u'T2_CH_CERN', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u'[]', u"['tree.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'F', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0195.cern.ch/mon/cms1605/190510_151641:dsperka_crab_20190510_171634', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv221.fnal.gov:9620', u'crab3@vocms0195.cern.ch', u'F', u'[]', u'T', u'/store/user/dsperka/Zdark/May10_2018/', u'F', u'None', u'F', u'None', u'DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8', u'None', u'761ce660822a63b3ca05897c1edd897b81eb920cf0dd0c5cf691112a6679fa43.tar.gz', u'37154026', u'filetransfers', u'F', u'2001:1458:d00:2f::100:4f', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2019-05-14 21:26:52,770: 	 CRAB project directory:		/afs/cern.ch/work/d/dsperka/Zdark/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/crab_20190510_171634
+INFO 2019-05-14 21:26:52,770: 	 Task name:			190510_151641:dsperka_crab_20190510_171634
+INFO 2019-05-14 21:26:52,770: 	 Grid scheduler - Task Worker:	crab3@vocms0195.cern.ch - crab-prod-tw01
+INFO 2019-05-14 21:26:52,770: 	 Status on the CRAB server:	SUBMITTED
+INFO 2019-05-14 21:26:52,770: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/190510_151641%3Adsperka_crab_20190510_171634
+INFO 2019-05-14 21:26:52,770: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=dsperka&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=190510_151641%3Adsperka_crab_20190510_171634
+INFO 2019-05-14 21:26:52,770: 	 New dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=dsperka&var-task=190510_151641%3Adsperka_crab_20190510_171634
+INFO 2019-05-14 21:26:52,770: 	 In case of issues with the new dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2019-05-14 21:26:52,770: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 37154026)
+DEBUG 2019-05-14 21:26:52,770: 	 Webdir is located at http://vocms0195.cern.ch/mon/cms1605/190510_151641:dsperka_crab_20190510_171634
+DEBUG 2019-05-14 21:26:52,843: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0195/cms1605/190510_151641:dsperka_crab_20190510_171634
+DEBUG 2019-05-14 21:26:52,843: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0195/cms1605/190510_151641:dsperka_crab_20190510_171634/status_cache
+DEBUG 2019-05-14 21:26:53,915: 	 Got information from status cache file: {'11': {'Retries': 0, 'WallDurations': [8.0, 764.0], 'StartTimes': [1557501874.0], 'SubmitTimes': [1557501640.0], 'JobIds': ['37154038.0'], 'EndTimes': [1557502638.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [918744], 'TotalUserCpuTimeHistory': [444], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [20]}, '10': {'Retries': 0, 'WallDurations': [9.0, 994.0], 'StartTimes': [1557501886.0], 'SubmitTimes': [1557501639.0], 'JobIds': ['37154037.0'], 'EndTimes': [1557502880.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [989000], 'TotalUserCpuTimeHistory': [528], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [15]}, '13': {'Retries': 0, 'WallDurations': [8.0, 722.0], 'StartTimes': [1557501870.0], 'SubmitTimes': [1557501640.0], 'JobIds': ['37154040.0'], 'EndTimes': [1557502592.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [929040], 'TotalUserCpuTimeHistory': [281], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [10]}, '12': {'Retries': 0, 'WallDurations': [8.0, 1043.0], 'StartTimes': [1557501871.0], 'SubmitTimes': [1557501640.0], 'JobIds': ['37154039.0'], 'EndTimes': [1557502914.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [976284], 'TotalUserCpuTimeHistory': [606], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [16]}, '15': {'Retries': 0, 'WallDurations': [9.0, 745.0], 'StartTimes': [1557501876.0], 'SubmitTimes': [1557501641.0], 'JobIds': ['37154045.0'], 'EndTimes': [1557502621.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [949680], 'TotalUserCpuTimeHistory': [306], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [10]}, '14': {'Retries': 0, 'WallDurations': [9.0, 775.0], 'StartTimes': [1557501874.0], 'SubmitTimes': [1557501640.0], 'JobIds': ['37154041.0'], 'EndTimes': [1557502649.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [899784], 'TotalUserCpuTimeHistory': [511], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [18]}, '17': {'Retries': 0, 'WallDurations': [9.0, 593.0], 'StartTimes': [1557501870.0], 'SubmitTimes': [1557501641.0], 'JobIds': ['37154043.0'], 'EndTimes': [1557502463.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [947976], 'TotalUserCpuTimeHistory': [259], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [8]}, '16': {'Retries': 0, 'WallDurations': [9.0, 648.0], 'StartTimes': [1557501877.0], 'SubmitTimes': [1557501641.0], 'JobIds': ['37154042.0'], 'EndTimes': [1557502525.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [885812], 'TotalUserCpuTimeHistory': [407], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [10]}, '19': {'Retries': 0, 'WallDurations': [9.0, 733.0], 'StartTimes': [1557501872.0], 'SubmitTimes': [1557501641.0], 'JobIds': ['37154044.0'], 'EndTimes': [1557502605.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [891152], 'TotalUserCpuTimeHistory': [442], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [19]}, '18': {'Retries': 0, 'WallDurations': [8.0, 662.0], 'StartTimes': [1557501871.0], 'SubmitTimes': [1557501642.0], 'JobIds': ['37154047.0'], 'EndTimes': [1557502533.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [959784], 'TotalUserCpuTimeHistory': [277], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [8]}, '1': {'Retries': 0, 'WallDurations': [9.0, 626.0], 'StartTimes': [1557501884.0], 'SubmitTimes': [1557501637.0], 'JobIds': ['37154029.0'], 'EndTimes': [1557502510.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [894000], 'TotalUserCpuTimeHistory': [418], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [12]}, '3': {'Retries': 0, 'WallDurations': [8.0, 739.0], 'StartTimes': [1557501878.0], 'SubmitTimes': [1557501637.0], 'JobIds': ['37154028.0'], 'EndTimes': [1557502617.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [887236], 'TotalUserCpuTimeHistory': [479], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [12]}, '2': {'Retries': 0, 'WallDurations': [9.0, 647.0], 'StartTimes': [1557501881.0], 'SubmitTimes': [1557501638.0], 'JobIds': ['37154031.0'], 'EndTimes': [1557502528.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [993212], 'TotalUserCpuTimeHistory': [308], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [9]}, '5': {'Retries': 0, 'WallDurations': [9.0, 694.0], 'StartTimes': [1557501882.0], 'SubmitTimes': [1557501639.0], 'JobIds': ['37154034.0'], 'EndTimes': [1557502576.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [975368], 'TotalUserCpuTimeHistory': [301], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [10]}, '4': {'Retries': 0, 'WallDurations': [9.0, 796.0], 'StartTimes': [1557501885.0], 'SubmitTimes': [1557501638.0], 'JobIds': ['37154030.0'], 'EndTimes': [1557502681.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [915664], 'TotalUserCpuTimeHistory': [468], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [15]}, '7': {'Retries': 0, 'WallDurations': [9.0, 660.0], 'StartTimes': [1557501874.0], 'SubmitTimes': [1557501638.0], 'JobIds': ['37154033.0'], 'EndTimes': [1557502534.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [921960], 'TotalUserCpuTimeHistory': [418], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [13]}, '6': {'Retries': 0, 'WallDurations': [9.0, 750.0], 'StartTimes': [1557501876.0], 'SubmitTimes': [1557501638.0], 'JobIds': ['37154032.0'], 'EndTimes': [1557502626.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [900420], 'TotalUserCpuTimeHistory': [426], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [15]}, '9': {'Retries': 0, 'WallDurations': [9.0, 736.0], 'StartTimes': [1557501875.0], 'SubmitTimes': [1557501639.0], 'JobIds': ['37154035.0'], 'EndTimes': [1557502611.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [892968], 'TotalUserCpuTimeHistory': [491], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [15]}, '20': {'Retries': 0, 'WallDurations': [9.0, 686.0], 'StartTimes': [1557501877.0], 'SubmitTimes': [1557501642.0], 'JobIds': ['37154046.0'], 'EndTimes': [1557502563.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [970344], 'TotalUserCpuTimeHistory': [371], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [17]}, '8': {'Retries': 0, 'WallDurations': [9.0, 716.0], 'StartTimes': [1557501869.0], 'SubmitTimes': [1557501639.0], 'JobIds': ['37154036.0'], 'EndTimes': [1557502585.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1031484], 'TotalUserCpuTimeHistory': [251], 'SiteHistory': ['Unknown', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [9]}}
+INFO 2019-05-14 21:26:53,915: 	 Status on the scheduler:	COMPLETED
+INFO 2019-05-14 21:26:53,915: 	 
+Jobs status:                    finished     		100.0% (20/20)
+INFO 2019-05-14 21:26:53,993: 	 
+No publication information available yet
+INFO 2019-05-14 21:26:53,994: 	 
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2019-05-14 21:26:53,994: 	 
+Summary of run jobs:
+ * Memory: 947MB min, 1007MB max, 915MB ave
+ * Runtime: 0:09:53 min, 0:17:23 max, 0:12:16 ave
+ * CPU eff: 36% min, 69% max, 56% ave
+ * Waste: 0:02:55 (1% of total)
+
+INFO 2019-05-14 21:26:54,042: 	 Log file is /afs/cern.ch/work/d/dsperka/Zdark/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/crab_20190510_171634/crab.log

@@ -1,0 +1,18 @@
+<use name="DataFormats/Candidate"/>
+<use name="DataFormats/MuonReco"/>
+<use name="DataFormats/PatCandidates"/>
+<use name="TrackingTools/AnalyticalJacobians"/>
+<use name="TrackingTools/TrajectoryParametrization"/>
+<use name="MagneticField/Engine"/>
+<use name="MagneticField/Records"/>
+<use name="RecoParticleFlow/PFClusterTools"/>
+<use name="RecoVertex/KinematicFitPrimitives"/>
+<use name="RecoVertex/KinematicFit"/>
+<use name="RecoVertex/KalmanVertexFit"/>
+<use name="DataFormats/BeamSpot"/>
+<use name="DataFormats/VertexReco"/>
+<use name="TrackingTools/TransientTrack"/>
+
+<export>
+    <lib name="1"/>
+</export>

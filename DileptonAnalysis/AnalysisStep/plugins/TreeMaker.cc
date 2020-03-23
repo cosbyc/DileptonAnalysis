@@ -76,9 +76,9 @@ struct KalmanVertexFitResult{
   std::vector<LorentzVector> refitVectors;
   GlobalPoint position;
   GlobalError err;
-  float lxy, lxyErr, sigLxy;
+  float lxy, lxyErr, sigLxy, chiSq;
 
-  KalmanVertexFitResult():vtxProb(-1.0),valid(false),lxy(-1.0),lxyErr(-1.0),sigLxy(-1.0){}
+  KalmanVertexFitResult():vtxProb(-1.0),valid(false),lxy(-1.0),lxyErr(-1.0),sigLxy(-1.0),chiSq(-1.0){}
 
   float mass() const
   {
@@ -234,9 +234,14 @@ class TreeMaker : public edm::one::EDAnalyzer<edm::one::SharedResources, edm::on
         std::vector<double>          lxy;    
         std::vector<double>          lxyErr;
         std::vector<double>          sigLxy;
- 
+        std::vector<double>          chiSq; 
   
-
+        std::vector<double>          m1Impact;
+        std::vector<double>          m2Impact;
+        
+        // New Trigger info
+        std::vector<string>          triggersPassed;
+        string fullList;
 
         // TTree carrying the event weight information
         TTree* tree;
@@ -271,11 +276,14 @@ class TreeMaker : public edm::one::EDAnalyzer<edm::one::SharedResources, edm::on
 
         edm::EDGetTokenT<reco::BeamSpot> beamSpotToken_;
         const reco::BeamSpot* beamSpot_;       
+
+  //        edm::EDGetTokenT<edm::TriggerResults> triggerResultsToken;
         
  
 };
 
 TreeMaker::TreeMaker(const edm::ParameterSet& iConfig): 
+
     triggerResultsTag        (iConfig.getParameter<edm::InputTag>("triggerresults")),
     filterResultsTag         (iConfig.getParameter<edm::InputTag>("filterresults")),
     triggerResultsToken      (consumes<edm::TriggerResults>                    (triggerResultsTag)),
@@ -389,6 +397,11 @@ void TreeMaker::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
     if (isMC) iEvent.getByToken(gensToken, gensH);
 
 
+    // new trigger collection
+    edm::Handle<edm::TriggerResults> trigger;
+    iEvent.getByToken(triggerResultsToken,trigger);
+    const edm::TriggerNames trigNames = iEvent.triggerNames(*trigger);
+
 
     Handle<BXVector<GlobalAlgBlk>> alg;
     iEvent.getByToken(algToken_,alg);
@@ -457,7 +470,15 @@ void TreeMaker::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
     lxy.clear();
     lxyErr.clear();
     sigLxy.clear();
+    chiSq.clear();
+
+    m1Impact.clear();
+    m2Impact.clear();
     
+    triggersPassed.clear();
+    fullList.clear();
+
+
     // Event information - MC weight, event ID (run, lumi, event) and so on
     wgt = 1.0;
     if (isMC && useLHEWeights && genEvtInfoH.isValid()) wgt = genEvtInfoH->weight(); 
@@ -465,6 +486,29 @@ void TreeMaker::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
     event = iEvent.id().event();
     run   = iEvent.id().run();
     lumSec  = iEvent.luminosityBlock();
+
+
+
+    unsigned int _tSize = trigger->size();
+    // create a string with all passing trigger names
+    for (unsigned int i=0; i<_tSize; ++i) {
+      std::string triggerName = trigNames.triggerName(i);
+      if (strstr(triggerName.c_str(),"_step")) continue;
+      if (strstr(triggerName.c_str(),"MC_")) continue;
+      if (strstr(triggerName.c_str(),"AlCa_")) continue;
+      if (strstr(triggerName.c_str(),"DST_")) continue;
+      if (strstr(triggerName.c_str(),"HLT_HI")) continue;
+      if (strstr(triggerName.c_str(),"HLT_Physics")) continue;
+      if (strstr(triggerName.c_str(),"HLT_Random")) continue;
+      if (strstr(triggerName.c_str(),"HLT_ZeroBias")) continue;
+      if (strstr(triggerName.c_str(),"HLT_IsoTrack")) continue;
+      if (strstr(triggerName.c_str(),"Hcal")) continue;
+      if (strstr(triggerName.c_str(),"Ecal")) continue;
+      if (!strstr(triggerName.c_str(),"mu")&&!strstr(triggerName.c_str(),"Mu")) continue;
+      //cout << triggerName;
+      if (trigger->accept(i)) fullList += triggerName;
+    }
+    triggersPassed.push_back(fullList);
 
     // Trigger info
     hltsinglemu = 0;
@@ -532,7 +576,7 @@ void TreeMaker::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
         pat::MuonRef mref(muonsH, muons_iter - muonsH->begin());
         muonv.push_back(mref);
     }
-    if (muonv.size() < 2) {
+    if (not (muonv.size() == 2)) {
         if (applyDimuonFilter) return;
     }
     else sort(muonv.begin(), muonv.end(), muonSorter);
@@ -548,7 +592,10 @@ void TreeMaker::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
     lxy.push_back(kalmanMuMuVertexFit.lxy);
     lxyErr.push_back(kalmanMuMuVertexFit.lxyErr);
     sigLxy.push_back(kalmanMuMuVertexFit.sigLxy);
+    chiSq.push_back(kalmanMuMuVertexFit.chiSq);
 
+    m1Impact.push_back(muonv[0]->track().get()->dxy());
+    m2Impact.push_back(muonv[1]->track().get()->dxy());
 
     int nLoose=0;
     for (size_t i = 0; i < muonv.size(); i++) {
@@ -766,6 +813,8 @@ void TreeMaker::beginJob() {
     tree->Branch("l1Result", "std::vector<bool>" ,&l1Result_ , 32000, 0); 
     tree->Branch("trig"                , &trig                         , "trig/i");
 
+    tree->Branch("triggersPassed"              , "std::vector<string>"          , &triggersPassed);
+
     // Flags
     tree->Branch("flags"                , &flags                         , "flags/b");
 
@@ -781,6 +830,10 @@ void TreeMaker::beginJob() {
     tree->Branch("midmedium"                  , "std::vector<bool>"            , &midmedium      );
     tree->Branch("midtight"                  , "std::vector<bool>"            , &midtight      );
     tree->Branch("miso"                 , "std::vector<double>"          , &miso     );
+    tree->Branch("m1Impact"                 , "std::vector<double>"          , &m1Impact     );
+    tree->Branch("m2Impact"                 , "std::vector<double>"          , &m2Impact     );
+
+
 
     // Dimuon info
     tree->Branch("m1idx"                , "std::vector<unsigned char>"   , &m1idx    );
@@ -794,6 +847,7 @@ void TreeMaker::beginJob() {
     tree->Branch("lxy"                     , "std::vector<double>"          , &lxy            );
     tree->Branch("lxyErr"                     , "std::vector<double>"          , &lxyErr      );
     tree->Branch("sigLxy"                     , "std::vector<double>"          , &sigLxy      );
+    tree->Branch("chiSq"                     , "std::vector<double>"          , &chiSq      );
 
     // Electron info
     //tree->Branch("electrons"            , "std::vector<TLorentzVector>"  , &electrons, 32000, 0);
@@ -845,6 +899,8 @@ void TreeMaker::beginRun(edm::Run const& iRun, edm::EventSetup const& iSetup) {
     triggerPathsVector.push_back("DST_HT450_PFScouting_v*");
     */
 
+    /*
+
     HLTConfigProvider hltConfig;
     bool changedConfig = false;
     hltConfig.init(iRun, iSetup, triggerResultsTag.process(), changedConfig);
@@ -887,6 +943,8 @@ void TreeMaker::beginRun(edm::Run const& iRun, edm::EventSetup const& iSetup) {
             }
         }
     }
+
+    */
 }
 
 void TreeMaker::endRun(edm::Run const&, edm::EventSetup const&) {
@@ -963,6 +1021,7 @@ KalmanVertexFitResult TreeMaker::vertexWithKalmanFitter(std::vector<const reco::
   TransientVertex tv = kvf.vertex(transTrks);
 
   if ( tv.isValid() ){
+    results.chiSq = tv.totalChiSquared();
     results.vtxProb = TMath::Prob(tv.totalChiSquared(), (int)tv.degreesOfFreedom());
     results.valid = true;
     results.position = tv.position();

@@ -1,0 +1,40 @@
+DEBUG 2020-02-07 19:43:47.933 UTC: 	 Running on: Linux lxplus793.cern.ch 3.10.0-1062.9.1.el7.x86_64 #1 SMP Fri Dec 6 15:49:49 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-02-07 19:43:47.947 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-02-07 19:43:47.947 UTC: 	 Executing command: 'submit'
+DEBUG 2020-02-07 19:43:47.947 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+DEBUG 2020-02-07 19:43:47.955 UTC: 	 Checking credentials
+DEBUG 2020-02-07 19:43:47.955 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-02-07 19:43:47.955 UTC: 	 Getting proxy life time left
+DEBUG 2020-02-07 19:43:48.559 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 41887
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 19:43:49.165 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 41886
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 19:43:49.165 UTC: 	 Proxy lifetime 41887 secs is different from voms extension lifetime 41886 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-02-07 19:43:49.165 UTC: 	 Proxy valid for 11:38:06 hours
+INFO 2020-02-07 19:43:49.165 UTC: 	 Will use CRAB configuration file crabConfig.py
+DEBUG 2020-02-07 19:43:49.165 UTC: 	 Loading CRAB configuration file.
+DEBUG 2020-02-07 19:43:49.191 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2020-02-07 19:43:49.308 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 19:43:49.308 UTC: 	 Checking credentials
+DEBUG 2020-02-07 19:43:49.309 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-02-07 19:43:49.309 UTC: 	 Getting proxy life time left
+DEBUG 2020-02-07 19:43:49.913 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 41886
+
+ error: 
+ retcode : 0
+ERROR 2020-02-07 19:43:50.495 UTC: 	 Keyboard Interrupted

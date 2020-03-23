@@ -1,0 +1,110 @@
+DEBUG 2020-02-07 19:41:35.924 UTC: 	 Running on: Linux lxplus793.cern.ch 3.10.0-1062.9.1.el7.x86_64 #1 SMP Fri Dec 6 15:49:49 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-02-07 19:41:35.939 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-02-07 19:41:35.940 UTC: 	 Executing command: 'submit'
+DEBUG 2020-02-07 19:41:35.940 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+DEBUG 2020-02-07 19:41:35.947 UTC: 	 Checking credentials
+DEBUG 2020-02-07 19:41:35.947 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-02-07 19:41:35.947 UTC: 	 Getting proxy life time left
+DEBUG 2020-02-07 19:41:36.652 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 42019
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 19:41:37.258 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 42018
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 19:41:37.258 UTC: 	 Proxy lifetime 42019 secs is different from voms extension lifetime 42018 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-02-07 19:41:37.259 UTC: 	 Proxy valid for 11:40:18 hours
+INFO 2020-02-07 19:41:37.259 UTC: 	 Will use CRAB configuration file crabConfig.py
+DEBUG 2020-02-07 19:41:37.259 UTC: 	 Loading CRAB configuration file.
+DEBUG 2020-02-07 19:41:37.266 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2020-02-07 19:41:37.403 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 19:41:37.403 UTC: 	 Checking credentials
+DEBUG 2020-02-07 19:41:37.404 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-02-07 19:41:37.404 UTC: 	 Getting proxy life time left
+DEBUG 2020-02-07 19:41:38.012 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 42018
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 19:41:38.619 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 42017
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 19:41:38.619 UTC: 	 Proxy lifetime 42018 secs is different from voms extension lifetime 42017 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-02-07 19:41:38.619 UTC: 	 Proxy valid for 11:40:17 hours
+DEBUG 2020-02-07 19:41:39.224 UTC: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u119364 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 19:41:39.337 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+DEBUG 2020-02-07 19:41:39.447 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 19:41:39.447 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2020-02-07 19:41:39.447 UTC: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby_cmsweb.cern.ch for credential name
+DEBUG 2020-02-07 19:41:39.752 UTC: 	 Executing : 
+ command : myproxy-info -l 26967ec133c94bf7c0631336874999a7497a622e -s myproxy.cern.ch
+ output : username: 26967ec133c94bf7c0631336874999a7497a622e
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  timeleft: 552:46:52  (23.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 19:41:39.753 UTC: 	 Myproxy is valid: 1990012
+DEBUG 2020-02-07 19:41:39.753 UTC: 	 Command use: submit
+DEBUG 2020-02-07 19:41:39.753 UTC: 	 Options use: ['crabConfig.py']
+DEBUG 2020-02-07 19:41:39.834 UTC: 	 CRABClient version: 3.3.2001
+DEBUG 2020-02-07 19:41:39.834 UTC: 	 Instance is prod
+DEBUG 2020-02-07 19:41:39.834 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2020-02-07 19:41:39.834 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2020-02-07 19:41:39.835 UTC: 	 Started submission
+DEBUG 2020-02-07 19:41:39.835 UTC: 	 Working on /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/EGamma-Run2018A-17Sep2018-v2/crab_20200207_204137
+DEBUG 2020-02-07 19:41:40.059 UTC: 	 Loading required information from the environment
+DEBUG 2020-02-07 19:41:40.059 UTC: 	 Found CMSSW_10_2_3 for slc7_amd64_gcc700 with base /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3
+DEBUG 2020-02-07 19:41:40.059 UTC: 	 Loading required information from the environment
+DEBUG 2020-02-07 19:41:40.060 UTC: 	 Found CMSSW_10_2_3 for slc7_amd64_gcc700 with base /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3
+DEBUG 2020-02-07 19:41:40.075 UTC: 	 UNIQUE NAME: tarUUID 990859a1-25c9-4e71-98bd-d68c6f6995a1 
+DEBUG 2020-02-07 19:41:40.076 UTC: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.section_('JobType')
+config.JobType.psetName = '../../test/tree_cfg.py'
+config.JobType.pluginName = 'Analysis'
+config.JobType.pyCfgParams = ['isMC=False', 'useWeights=False', 'useMediumID2016=False']
+config.JobType.allowUndistributedCMSSW = True
+config.section_('Data')
+config.Data.inputDataset = '/EGamma/Run2018A-17Sep2018-v2/MINIAOD'
+config.Data.unitsPerJob = 200
+config.Data.outLFNDirBase = '/store/user/ccosby/Zdark013120/'
+config.Data.splitting = 'LumiBased'
+config.Data.lumiMask = '/afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/Cert_314472-325175_13TeV_17SeptEarlyReReco2018ABC_PromptEraD_Collisions18_JSON.txt'
+config.section_('Site')
+config.Site.storageSite = 'T2_CH_CERNBOX'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2020-02-07 19:41:40.076 UTC: 	 self.config.JobType.psetName: ../../test/tree_cfg.py
+INFO 2020-02-07 19:41:40.077 UTC: 	 Importing CMSSW configuration ../../test/tree_cfg.py
+DEBUG 2020-02-07 19:41:40.077 UTC: 	 Additional parameters for the CMSSW configuration are: ['isMC=False', 'useWeights=False', 'useMediumID2016=False']
+ERROR 2020-02-07 19:41:43.554 UTC: 	 Keyboard Interrupted
+INFO 2020-02-07 19:41:43.556 UTC: 	 Log file is /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/EGamma-Run2018A-17Sep2018-v2/crab_20200207_204137/crab.log

@@ -1,11 +1,7 @@
 samples = {}
 
 from DileptonAnalysis.AnalysisStep.samples.DY import AddDYSamples
-from DileptonAnalysis.AnalysisStep.samples.TT import AddTTSamples
-from DileptonAnalysis.AnalysisStep.samples.JetHT2017 import AddJetHT2017Samples
-from DileptonAnalysis.AnalysisStep.samples.EG2017 import AddEG2017Samples
+from DileptonAnalysis.AnalysisStep.samples.EG2018 import AddEG2018Samples
 
 AddDYSamples(samples)
-#AddTTSamples(samples)
-#AddJetHT2017Samples(samples)
-AddEG2017Samples(samples)
+AddEG2018Samples(samples)

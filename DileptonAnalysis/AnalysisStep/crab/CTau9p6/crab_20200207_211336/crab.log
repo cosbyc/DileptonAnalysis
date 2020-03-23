@@ -1,0 +1,139 @@
+DEBUG 2020-02-07 20:13:34.907 UTC: 	 Running on: Linux lxplus793.cern.ch 3.10.0-1062.9.1.el7.x86_64 #1 SMP Fri Dec 6 15:49:49 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-02-07 20:13:34.919 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-02-07 20:13:34.920 UTC: 	 Executing command: 'submit'
+DEBUG 2020-02-07 20:13:34.920 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+DEBUG 2020-02-07 20:13:34.926 UTC: 	 Checking credentials
+DEBUG 2020-02-07 20:13:34.926 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-02-07 20:13:34.926 UTC: 	 Getting proxy life time left
+DEBUG 2020-02-07 20:13:35.530 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 40100
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 20:13:36.135 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 40099
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 20:13:36.135 UTC: 	 Proxy lifetime 40100 secs is different from voms extension lifetime 40099 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-02-07 20:13:36.136 UTC: 	 Proxy valid for 11:08:19 hours
+INFO 2020-02-07 20:13:36.136 UTC: 	 Will use CRAB configuration file crabConfig.py
+DEBUG 2020-02-07 20:13:36.136 UTC: 	 Loading CRAB configuration file.
+DEBUG 2020-02-07 20:13:36.142 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2020-02-07 20:13:36.258 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 20:13:36.259 UTC: 	 Checking credentials
+DEBUG 2020-02-07 20:13:36.259 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-02-07 20:13:36.259 UTC: 	 Getting proxy life time left
+DEBUG 2020-02-07 20:13:36.863 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 40099
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 20:13:37.468 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 40098
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 20:13:37.468 UTC: 	 Proxy lifetime 40099 secs is different from voms extension lifetime 40098 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-02-07 20:13:37.468 UTC: 	 Proxy valid for 11:08:18 hours
+DEBUG 2020-02-07 20:13:38.073 UTC: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u119364 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 20:13:38.145 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+DEBUG 2020-02-07 20:13:38.253 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 20:13:38.254 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2020-02-07 20:13:38.254 UTC: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby_cmsweb.cern.ch for credential name
+DEBUG 2020-02-07 20:13:38.457 UTC: 	 Executing : 
+ command : myproxy-info -l 26967ec133c94bf7c0631336874999a7497a622e -s myproxy.cern.ch
+ output : username: 26967ec133c94bf7c0631336874999a7497a622e
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  timeleft: 552:14:53  (23.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 20:13:38.458 UTC: 	 Myproxy is valid: 1988093
+DEBUG 2020-02-07 20:13:38.458 UTC: 	 Command use: submit
+DEBUG 2020-02-07 20:13:38.458 UTC: 	 Options use: ['crabConfig.py']
+DEBUG 2020-02-07 20:13:38.526 UTC: 	 CRABClient version: 3.3.2001
+DEBUG 2020-02-07 20:13:38.526 UTC: 	 Instance is prod
+DEBUG 2020-02-07 20:13:38.526 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2020-02-07 20:13:38.526 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2020-02-07 20:13:38.526 UTC: 	 Started submission
+DEBUG 2020-02-07 20:13:38.526 UTC: 	 Working on /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/CTau9p6/crab_20200207_211336
+DEBUG 2020-02-07 20:13:38.628 UTC: 	 Loading required information from the environment
+DEBUG 2020-02-07 20:13:38.628 UTC: 	 Found CMSSW_10_2_3 for slc7_amd64_gcc700 with base /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3
+DEBUG 2020-02-07 20:13:38.628 UTC: 	 Loading required information from the environment
+DEBUG 2020-02-07 20:13:38.628 UTC: 	 Found CMSSW_10_2_3 for slc7_amd64_gcc700 with base /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3
+DEBUG 2020-02-07 20:13:38.641 UTC: 	 UNIQUE NAME: tarUUID 23d9860f-b402-41ca-a154-d4adc73786a5 
+DEBUG 2020-02-07 20:13:38.641 UTC: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.section_('JobType')
+config.JobType.psetName = '../../test/tree_cfg.py'
+config.JobType.pluginName = 'Analysis'
+config.JobType.pyCfgParams = ['isMC=True', 'useWeights=True', 'xsec=1.00', 'addEventInfo=True']
+config.JobType.allowUndistributedCMSSW = True
+config.section_('Data')
+config.Data.inputDataset = '/SIDM_XXTo2ATo4Mu_mXX-500_mA-1p2_ctau-9p6_TuneCP5_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM'
+config.Data.unitsPerJob = 10000
+config.Data.splitting = 'EventAwareLumiBased'
+config.Data.outLFNDirBase = '/store/user/ccosby/CTau9p6_Zdark_02072020/'
+config.section_('Site')
+config.Site.storageSite = 'T2_CH_CERNBOX'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2020-02-07 20:13:38.641 UTC: 	 self.config.JobType.psetName: ../../test/tree_cfg.py
+INFO 2020-02-07 20:13:38.641 UTC: 	 Importing CMSSW configuration ../../test/tree_cfg.py
+DEBUG 2020-02-07 20:13:38.641 UTC: 	 Additional parameters for the CMSSW configuration are: ['isMC=True', 'useWeights=True', 'xsec=1.00', 'addEventInfo=True']
+INFO 2020-02-07 20:13:38.860 UTC: 	 Finished importing CMSSW configuration ../../test/tree_cfg.py
+DEBUG 2020-02-07 20:13:38.861 UTC: 	 Writing CMSSW configuration to /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/CTau9p6/crab_20200207_211336/inputs/PSet.py
+DEBUG 2020-02-07 20:13:38.906 UTC: 	 The following EDM output files will be collected: []
+DEBUG 2020-02-07 20:13:38.906 UTC: 	 The following TFile output files will be collected: ['tree.root']
+DEBUG 2020-02-07 20:13:38.906 UTC: 	 The following user output files (not listed as PoolOuputModule or TFileService in the CMSSW PSet) will be collected: 
+DEBUG 2020-02-07 20:13:38.906 UTC: 	 Loading required information from the environment
+DEBUG 2020-02-07 20:13:38.906 UTC: 	 Found CMSSW_10_2_3 for slc7_amd64_gcc700 with base /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3
+DEBUG 2020-02-07 20:13:38.906 UTC: 	 Making tarball in /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/CTau9p6/crab_20200207_211336/inputs/23d9860f-b402-41ca-a154-d4adc73786a5default.tgz
+DEBUG 2020-02-07 20:13:38.907 UTC: 	 Checking directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/lib
+DEBUG 2020-02-07 20:13:38.907 UTC: 	 Adding directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/lib to tarball
+DEBUG 2020-02-07 20:13:38.919 UTC: 	 Checking directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/biglib
+DEBUG 2020-02-07 20:13:38.919 UTC: 	 Adding directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/biglib to tarball
+DEBUG 2020-02-07 20:13:38.919 UTC: 	 Checking directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/module
+DEBUG 2020-02-07 20:13:38.929 UTC: 	 Adding data directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/data to tarball
+DEBUG 2020-02-07 20:13:39.470 UTC: 	 Adding data directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/interface to tarball
+DEBUG 2020-02-07 20:13:39.554 UTC: 	 Uploading archive /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/CTau9p6/crab_20200207_211336/inputs/23d9860f-b402-41ca-a154-d4adc73786a5default.tgz (1.092773.1 MB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2020-02-07 20:13:40.925 UTC: 	 Loading required information from the environment
+DEBUG 2020-02-07 20:13:40.925 UTC: 	 Found CMSSW_10_2_3 for slc7_amd64_gcc700 with base /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3
+DEBUG 2020-02-07 20:13:40.925 UTC: 	 Making tarball in /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/CTau9p6/crab_20200207_211336/inputs/debugFiles.tgz
+DEBUG 2020-02-07 20:13:40.932 UTC: 	 Uploading archive /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/CTau9p6/crab_20200207_211336/inputs/debugFiles.tgz (4 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2020-02-07 20:13:41.103 UTC: 	 Result uploading input files: bc3da6499c5ba9da24b5233aec4ca185eaaa22a4d20f57b14df7c70ee1c3e6be.tar.gz 
+WARNING 2020-02-07 20:13:41.103 UTC: 	 Warning: The following output files will not be published, as they are not EDM files: ['tree.root']
+INFO 2020-02-07 20:13:41.103 UTC: 	 Sending the request to the server at cmsweb.cern.ch
+DEBUG 2020-02-07 20:13:41.103 UTC: 	 Submitting {'maxjobruntime': 1250, 'extrajdl': [], 'ignorelocality': 0, 'savelogsflag': 0, 'useparent': 0, 'asyncdest': 'T2_CH_CERNBOX', 'algoargs': 10000, 'cachefilename': 'bc3da6499c5ba9da24b5233aec4ca185eaaa22a4d20f57b14df7c70ee1c3e6be.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 2000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_10_2_3', 'edmoutfiles': [], 'userfiles': [], 'primarydataset': '', 'inputdata': '/SIDM_XXTo2ATo4Mu_mXX-500_mA-1p2_ctau-9p6_TuneCP5_13TeV-madgraph-pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1/MINIAODSIM', 'lfn': '/store/user/ccosby/CTau9p6_Zdark_02072020/', 'dryrun': 0, 'workflow': 'crab_20200207_211336', 'cacheurl': u'https://cmsweb.cern.ch/crabcache', 'nonprodsw': 1, 'tfileoutfiles': ['tree.root'], 'oneEventMode': 0, 'debugfilename': '415f88c0e92e6c6631f5cf4c80a78aee0ec9690cb262f28da77f3f60e874246b.tar.gz', 'saveoutput': 1, 'publication': 1, 'jobarch': 'slc7_amd64_gcc700', 'totalunits': 0, 'splitalgo': 'EventAwareLumiBased', 'ignoreglobalblacklist': 0, 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'publishgroupname': 0, 'jobtype': 'Analysis', 'publishname2': ''} 
+DEBUG 2020-02-07 20:13:41.103 UTC: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=0&savelogsflag=0&useparent=0&asyncdest=T2_CH_CERNBOX&algoargs=10000&cachefilename=bc3da6499c5ba9da24b5233aec4ca185eaaa22a4d20f57b14df7c70ee1c3e6be.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_10_2_3&primarydataset=&inputdata=%2FSIDM_XXTo2ATo4Mu_mXX-500_mA-1p2_ctau-9p6_TuneCP5_13TeV-madgraph-pythia8%2FRunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v1%2FMINIAODSIM&lfn=%2Fstore%2Fuser%2Fccosby%2FCTau9p6_Zdark_02072020%2F&dryrun=0&workflow=crab_20200207_211336&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&nonprodsw=1&oneEventMode=0&debugfilename=415f88c0e92e6c6631f5cf4c80a78aee0ec9690cb262f28da77f3f60e874246b.tar.gz&saveoutput=1&publication=1&jobarch=slc7_amd64_gcc700&totalunits=0&splitalgo=EventAwareLumiBased&ignoreglobalblacklist=0&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=&tfileoutfiles=tree.root
+DEBUG 2020-02-07 20:13:48.723 UTC: 	 Result: {u'result': [{u'RequestName': u'200207_201348:ccosby_crab_20200207_211336'}]}
+INFO 2020-02-07 20:13:48.763 UTC: 	 Success: Your task has been delivered to the prod CRAB3 server.
+INFO 2020-02-07 20:13:48.763 UTC: 	 Task name: 200207_201348:ccosby_crab_20200207_211336
+INFO 2020-02-07 20:13:48.763 UTC: 	 Project dir: ./crab_20200207_211336
+INFO 2020-02-07 20:13:48.763 UTC: 	 Please use 'crab status -d ./crab_20200207_211336' to check how the submission process proceeds.
+DEBUG 2020-02-07 20:13:48.763 UTC: 	 About to return
+INFO 2020-02-07 20:13:48.766 UTC: 	 Log file is /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/CTau9p6/crab_20200207_211336/crab.log

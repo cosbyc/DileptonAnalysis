@@ -1,0 +1,313 @@
+DEBUG 2020-02-07 19:37:07.096 UTC: 	 Running on: Linux lxplus793.cern.ch 3.10.0-1062.9.1.el7.x86_64 #1 SMP Fri Dec 6 15:49:49 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-02-07 19:37:07.111 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-02-07 19:37:07.112 UTC: 	 Executing command: 'submit'
+DEBUG 2020-02-07 19:37:07.112 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+DEBUG 2020-02-07 19:37:07.145 UTC: 	 Checking credentials
+DEBUG 2020-02-07 19:37:07.146 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-02-07 19:37:07.146 UTC: 	 Getting proxy life time left
+DEBUG 2020-02-07 19:37:07.850 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 42288
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 19:37:08.456 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 42287
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 19:37:08.456 UTC: 	 Proxy lifetime 42288 secs is different from voms extension lifetime 42287 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-02-07 19:37:08.456 UTC: 	 Proxy valid for 11:44:47 hours
+INFO 2020-02-07 19:37:08.457 UTC: 	 Will use CRAB configuration file crabConfig.py
+DEBUG 2020-02-07 19:37:08.457 UTC: 	 Loading CRAB configuration file.
+ERROR 2020-02-07 19:37:08.490 UTC: 	 Error while loading CRAB configuration:
+No module named AnalysisStep.samples.Samples
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2020-02-07 19:37:08.490 UTC: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 35, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 320, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 88, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+No module named AnalysisStep.samples.Samples
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2020-02-07 19:38:13.440 UTC: 	 Running on: Linux lxplus793.cern.ch 3.10.0-1062.9.1.el7.x86_64 #1 SMP Fri Dec 6 15:49:49 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-02-07 19:38:13.453 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-02-07 19:38:13.453 UTC: 	 Executing command: 'submit'
+DEBUG 2020-02-07 19:38:13.454 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+DEBUG 2020-02-07 19:38:13.460 UTC: 	 Checking credentials
+DEBUG 2020-02-07 19:38:13.460 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-02-07 19:38:13.460 UTC: 	 Getting proxy life time left
+DEBUG 2020-02-07 19:38:14.065 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 42221
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 19:38:14.670 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 42221
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 19:38:14.670 UTC: 	 Proxy valid for 11:43:41 hours
+INFO 2020-02-07 19:38:14.670 UTC: 	 Will use CRAB configuration file crabConfig.py
+DEBUG 2020-02-07 19:38:14.670 UTC: 	 Loading CRAB configuration file.
+ERROR 2020-02-07 19:38:14.769 UTC: 	 Error while loading CRAB configuration:
+'CTau1'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2020-02-07 19:38:14.769 UTC: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 35, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 320, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 88, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+'CTau1'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2020-02-07 19:38:34.013 UTC: 	 Running on: Linux lxplus793.cern.ch 3.10.0-1062.9.1.el7.x86_64 #1 SMP Fri Dec 6 15:49:49 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-02-07 19:38:34.025 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-02-07 19:38:34.026 UTC: 	 Executing command: 'submit'
+DEBUG 2020-02-07 19:38:34.026 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+DEBUG 2020-02-07 19:38:34.032 UTC: 	 Checking credentials
+DEBUG 2020-02-07 19:38:34.032 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-02-07 19:38:34.032 UTC: 	 Getting proxy life time left
+DEBUG 2020-02-07 19:38:34.636 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 42201
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 19:38:35.243 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 42200
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 19:38:35.244 UTC: 	 Proxy lifetime 42201 secs is different from voms extension lifetime 42200 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-02-07 19:38:35.244 UTC: 	 Proxy valid for 11:43:20 hours
+INFO 2020-02-07 19:38:35.244 UTC: 	 Will use CRAB configuration file crabConfig.py
+DEBUG 2020-02-07 19:38:35.244 UTC: 	 Loading CRAB configuration file.
+ERROR 2020-02-07 19:38:35.272 UTC: 	 Error while loading CRAB configuration:
+'CTau1'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2020-02-07 19:38:35.272 UTC: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 35, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 320, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 88, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+'CTau1'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2020-02-07 19:48:53.949 UTC: 	 Running on: Linux lxplus793.cern.ch 3.10.0-1062.9.1.el7.x86_64 #1 SMP Fri Dec 6 15:49:49 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-02-07 19:48:53.962 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-02-07 19:48:53.963 UTC: 	 Executing command: 'submit'
+DEBUG 2020-02-07 19:48:53.963 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+DEBUG 2020-02-07 19:48:53.970 UTC: 	 Checking credentials
+DEBUG 2020-02-07 19:48:53.971 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-02-07 19:48:53.971 UTC: 	 Getting proxy life time left
+DEBUG 2020-02-07 19:48:54.575 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 41581
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 19:48:55.180 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 41580
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 19:48:55.180 UTC: 	 Proxy lifetime 41581 secs is different from voms extension lifetime 41580 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-02-07 19:48:55.180 UTC: 	 Proxy valid for 11:33:00 hours
+INFO 2020-02-07 19:48:55.180 UTC: 	 Will use CRAB configuration file crabConfig.py
+DEBUG 2020-02-07 19:48:55.181 UTC: 	 Loading CRAB configuration file.
+ERROR 2020-02-07 19:48:55.191 UTC: 	 Error while loading CRAB configuration:
+'CTau1'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2020-02-07 19:48:55.191 UTC: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 35, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 320, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 88, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+'CTau1'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2020-02-07 20:00:30.577 UTC: 	 Running on: Linux lxplus793.cern.ch 3.10.0-1062.9.1.el7.x86_64 #1 SMP Fri Dec 6 15:49:49 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-02-07 20:00:30.591 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-02-07 20:00:30.591 UTC: 	 Executing command: 'submit'
+DEBUG 2020-02-07 20:00:30.592 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+DEBUG 2020-02-07 20:00:30.598 UTC: 	 Checking credentials
+DEBUG 2020-02-07 20:00:30.598 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-02-07 20:00:30.598 UTC: 	 Getting proxy life time left
+DEBUG 2020-02-07 20:00:31.203 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 40884
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 20:00:31.809 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 40884
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 20:00:31.810 UTC: 	 Proxy valid for 11:21:24 hours
+INFO 2020-02-07 20:00:31.810 UTC: 	 Will use CRAB configuration file crabConfig.py
+DEBUG 2020-02-07 20:00:31.810 UTC: 	 Loading CRAB configuration file.
+ERROR 2020-02-07 20:00:31.825 UTC: 	 Error while loading CRAB configuration:
+'CTau1'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2020-02-07 20:00:31.825 UTC: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 35, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 320, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 88, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+'CTau1'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2020-02-07 20:03:34.074 UTC: 	 Running on: Linux lxplus793.cern.ch 3.10.0-1062.9.1.el7.x86_64 #1 SMP Fri Dec 6 15:49:49 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-02-07 20:03:34.087 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-02-07 20:03:34.087 UTC: 	 Executing command: 'submit'
+DEBUG 2020-02-07 20:03:34.087 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+DEBUG 2020-02-07 20:03:34.093 UTC: 	 Checking credentials
+DEBUG 2020-02-07 20:03:34.094 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-02-07 20:03:34.094 UTC: 	 Getting proxy life time left
+DEBUG 2020-02-07 20:03:34.698 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 40701
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 20:03:35.303 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 40700
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 20:03:35.303 UTC: 	 Proxy lifetime 40701 secs is different from voms extension lifetime 40700 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-02-07 20:03:35.303 UTC: 	 Proxy valid for 11:18:20 hours
+INFO 2020-02-07 20:03:35.304 UTC: 	 Will use CRAB configuration file crabConfig.py
+DEBUG 2020-02-07 20:03:35.304 UTC: 	 Loading CRAB configuration file.
+ERROR 2020-02-07 20:03:35.309 UTC: 	 Error while loading CRAB configuration:
+'CTau1'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2020-02-07 20:03:35.310 UTC: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 35, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 320, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 88, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+'CTau1'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2020-02-07 20:07:29.218 UTC: 	 Running on: Linux lxplus793.cern.ch 3.10.0-1062.9.1.el7.x86_64 #1 SMP Fri Dec 6 15:49:49 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-02-07 20:07:29.231 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-02-07 20:07:29.231 UTC: 	 Executing command: 'submit'
+DEBUG 2020-02-07 20:07:29.232 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+DEBUG 2020-02-07 20:07:29.238 UTC: 	 Checking credentials
+DEBUG 2020-02-07 20:07:29.238 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-02-07 20:07:29.238 UTC: 	 Getting proxy life time left
+DEBUG 2020-02-07 20:07:29.842 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 40466
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 20:07:30.447 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 40465
+
+ error: 
+ retcode : 0
+DEBUG 2020-02-07 20:07:30.447 UTC: 	 Proxy lifetime 40466 secs is different from voms extension lifetime 40465 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-02-07 20:07:30.447 UTC: 	 Proxy valid for 11:14:25 hours
+INFO 2020-02-07 20:07:30.447 UTC: 	 Will use CRAB configuration file crabConfig.py
+DEBUG 2020-02-07 20:07:30.447 UTC: 	 Loading CRAB configuration file.
+ERROR 2020-02-07 20:07:30.455 UTC: 	 Error while loading CRAB configuration:
+cannot import name AddCTauSamples
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2020-02-07 20:07:30.455 UTC: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 35, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 320, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 88, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+cannot import name AddCTauSamples
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile

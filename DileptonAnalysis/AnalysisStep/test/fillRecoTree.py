@@ -223,71 +223,71 @@ def fillTree():
 
 
   # Load all the efficiencies
-  f = {}
+  #f = {}
   eff = {}
 
   # Load the tag and probe efficiencies
-  jpsidir = '/afs/cern.ch/work/d/dsperka/www/private/testTnP_Jpsi_dR03_vetoEMTF_Dec10/'
-  for leg in ['L1_0_eta_0.0_0.9','L1_0_eta_0.9_1.9','L1_4p5_eta_0.0_0.9','L1_4p5_eta_0.9_1.9','L1_5_eta_0.0_0.9','L1_5_eta_0.9_1.9','L1_12_eta_0.0_0.9','L1_12_eta_0.9_1.9',
-              'L2L1_eta_0.0_0.9','L2L1_eta_0.9_1.9','L3L2_eta_0.0_0.9','L3L2_eta_0.9_1.9']:
+  #jpsidir = '/afs/cern.ch/work/d/dsperka/www/private/testTnP_Jpsi_dR03_vetoEMTF_Dec10/'
+  #for leg in ['L1_0_eta_0.0_0.9','L1_0_eta_0.9_1.9','L1_4p5_eta_0.0_0.9','L1_4p5_eta_0.9_1.9','L1_5_eta_0.0_0.9','L1_5_eta_0.9_1.9','L1_12_eta_0.0_0.9','L1_12_eta_0.9_1.9',
+  #            'L2L1_eta_0.0_0.9','L2L1_eta_0.9_1.9','L3L2_eta_0.0_0.9','L3L2_eta_0.9_1.9']:
 
-    if ('L2L1' in leg): era = 'BCDEF'
-    else: era = 'CDEF'
+   # if ('L2L1' in leg): era = 'BCDEF'
+    #else: era = 'CDEF'
 
-    if ('L3L2' in leg):
+    #if ('L3L2' in leg):
       # don't have mc eff for L3|L2 in 2017 yet, so use the 2017 data one assuming SF is small
-      f[leg+"_jpsi"] = TFile('/afs/cern.ch/work/d/dsperka/www/private/testTnP_Jpsi_dR03_vetoEMTF_Dec10/mu_JCB_bern4_'+leg+'_C.root','READ')
-      eff[leg+"_jpsi_data"] = f[leg+"_jpsi"].Get("mu_JCB_bern4_"+leg+"_C")
-      eff[leg+"_jpsi_mc"]   = f[leg+"_jpsi"].Get("mu_JCB_bern4_"+leg+"_C")
+#      f[leg+"_jpsi"] = TFile('/afs/cern.ch/work/d/dsperka/www/private/testTnP_Jpsi_dR03_vetoEMTF_Dec10/mu_JCB_bern4_'+leg+'_C.root','READ')
+#      eff[leg+"_jpsi_data"] = f[leg+"_jpsi"].Get("mu_JCB_bern4_"+leg+"_C")
+#      eff[leg+"_jpsi_mc"]   = f[leg+"_jpsi"].Get("mu_JCB_bern4_"+leg+"_C")
 
       ## don't have mc eff for L3|L2 in 2017 yet, so use the 2018 one assuming difference w.r.t 2017 is small 
       #f[leg+"_jpsi"] = TFile('/afs/cern.ch/work/d/dsperka/www/private/testTnP_Jpsi_dR03_vetoEMTF_2018_Jan21/mu_JCB_bern4_'+leg+'_CD.root','READ')
       #eff[leg+"_jpsi_data"] = f[leg+"_jpsi"].Get("mu_JCB_bern4_"+leg+"_"+era)
       #eff[leg+"_jpsi_mc"]   = f[leg+"_jpsi"].Get("mu_JCB_bern4_"+leg+"_"+era+"_ref")
-    elif ('L1_' in leg and (not 'L2' in leg)):
+#    elif ('L1_' in leg and (not 'L2' in leg)):
       # use the one with no dR cut, looks better
-      f[leg+"_jpsi"] = TFile('/afs/cern.ch/work/d/dsperka/www/private/testTnP_Jpsi_dR03_vetoEMTF_Dec10_testNoL1DRcut/mu_JCB_bern4_'+leg+'_'+era+'.root','READ')
-      eff[leg+"_jpsi_data"] = f[leg+"_jpsi"].Get("mu_JCB_bern4_"+leg+"_"+era)
-      eff[leg+"_jpsi_mc"]   = f[leg+"_jpsi"].Get("mu_JCB_bern4_"+leg+"_"+era+"_ref")
-    else:
-      f[leg+"_jpsi"] = TFile(jpsidir+'mu_JCB_bern4_'+leg+'_'+era+'.root','READ')
-      eff[leg+"_jpsi_data"] = f[leg+"_jpsi"].Get("mu_JCB_bern4_"+leg+"_"+era)
-      eff[leg+"_jpsi_mc"]   = f[leg+"_jpsi"].Get("mu_JCB_bern4_"+leg+"_"+era+"_ref")
+#      f[leg+"_jpsi"] = TFile('/afs/cern.ch/work/d/dsperka/www/private/testTnP_Jpsi_dR03_vetoEMTF_Dec10_testNoL1DRcut/mu_JCB_bern4_'+leg+'_'+era+'.root','READ')
+#      eff[leg+"_jpsi_data"] = f[leg+"_jpsi"].Get("mu_JCB_bern4_"+leg+"_"+era)
+#      eff[leg+"_jpsi_mc"]   = f[leg+"_jpsi"].Get("mu_JCB_bern4_"+leg+"_"+era+"_ref")
+#    else:
+#      f[leg+"_jpsi"] = TFile(jpsidir+'mu_JCB_bern4_'+leg+'_'+era+'.root','READ')
+#      eff[leg+"_jpsi_data"] = f[leg+"_jpsi"].Get("mu_JCB_bern4_"+leg+"_"+era)
+#      eff[leg+"_jpsi_mc"]   = f[leg+"_jpsi"].Get("mu_JCB_bern4_"+leg+"_"+era+"_ref")
 
-  zdir = '/afs/cern.ch/work/d/dsperka/www/private/testTnP_Z_dR03_vetoEMTF_Dec10/'
-  for leg in ['L1_4p5_eta_0.0_0.9','L1_4p5_eta_0.9_1.9','L1_5_eta_0.0_0.9','L1_5_eta_0.9_1.9','L1_12_eta_0.0_0.9','L1_12_eta_0.9_1.9', 
-              'L2L1_eta_0.0_0.9','L2L1_eta_0.9_1.9','L3L2_eta_0.0_0.9','L3L2_eta_0.9_1.9']:
+#  zdir = '/afs/cern.ch/work/d/dsperka/www/private/testTnP_Z_dR03_vetoEMTF_Dec10/'
+#  for leg in ['L1_4p5_eta_0.0_0.9','L1_4p5_eta_0.9_1.9','L1_5_eta_0.0_0.9','L1_5_eta_0.9_1.9','L1_12_eta_0.0_0.9','L1_12_eta_0.9_1.9', 
+#              'L2L1_eta_0.0_0.9','L2L1_eta_0.9_1.9','L3L2_eta_0.0_0.9','L3L2_eta_0.9_1.9']:
 
-    era = 'CDEF'
-
-    f[leg+"_Z"] = TFile(zdir+'mu_BWDCB_bern4_'+leg+'_'+era+'.root','READ')
-    eff[leg+"_Z_data"] = f[leg+"_Z"].Get("mu_BWDCB_bern4_"+leg+"_"+era)
-    eff[leg+"_Z_mc"]   = f[leg+"_Z"].Get("mu_BWDCB_bern4_"+leg+"_"+era+"_ref")
-
-  zlodir = '/afs/cern.ch/work/d/dsperka/www/private/testTnP_Z_dR03_vetoEMTF_Dec10_testNoL1DRcut/'
-  for leg in ['L1_12_eta_0.0_0.9','L1_12_eta_0.9_1.2', 'L1_12_eta_1.2_1.9']:
-
-    era = 'CDEF'
-
-    f[leg+"_Zlo"] = TFile(zlodir+'/mu_BWDCB_bern4_'+leg+'_'+era+'.root','READ')
-    eff[leg+"_Zlo_data"] = f[leg+"_Zlo"].Get("mu_BWDCB_bern4_"+leg+"_"+era)
-    eff[leg+"_Zlo_mc"]   = f[leg+"_Zlo"].Get("mu_BWDCB_bern4_"+leg+"_"+era+"_ref")        
+#    era = 'CDEF'
+#
+#    f[leg+"_Z"] = TFile(zdir+'mu_BWDCB_bern4_'+leg+'_'+era+'.root','READ')
+#    eff[leg+"_Z_data"] = f[leg+"_Z"].Get("mu_BWDCB_bern4_"+leg+"_"+era)
+#    eff[leg+"_Z_mc"]   = f[leg+"_Z"].Get("mu_BWDCB_bern4_"+leg+"_"+era+"_ref")
+#
+#  zlodir = '/afs/cern.ch/work/d/dsperka/www/private/testTnP_Z_dR03_vetoEMTF_Dec10_testNoL1DRcut/'
+#  for leg in ['L1_12_eta_0.0_0.9','L1_12_eta_0.9_1.2', 'L1_12_eta_1.2_1.9']:
+#
+#    era = 'CDEF'
+#
+#    f[leg+"_Zlo"] = TFile(zlodir+'/mu_BWDCB_bern4_'+leg+'_'+era+'.root','READ')
+#    eff[leg+"_Zlo_data"] = f[leg+"_Zlo"].Get("mu_BWDCB_bern4_"+leg+"_"+era)
+#    eff[leg+"_Zlo_mc"]   = f[leg+"_Zlo"].Get("mu_BWDCB_bern4_"+leg+"_"+era+"_ref")        
 
   # Load the scouting ID efficiency
-  for leg in ['ID_0.0_0.9','ID_0.9_1.9']:
-    f[leg+"_data"] = TFile('eff_data_'+leg+'.root','READ')
-    eff[leg+"_data"] = f[leg+"_data"].Get('eff_data_'+leg)
+#  for leg in ['ID_0.0_0.9','ID_0.9_1.9']:
+#    f[leg+"_data"] = TFile('eff_data_'+leg+'.root','READ')
+#    eff[leg+"_data"] = f[leg+"_data"].Get('eff_data_'+leg)
 
-    f[leg+"_mc"] = TFile('eff_mc_'+leg+'.root','READ')
-    eff[leg+"_mc"] = f[leg+"_mc"].Get('eff_mc_'+leg)
+#    f[leg+"_mc"] = TFile('eff_mc_'+leg+'.root','READ')
+#    eff[leg+"_mc"] = f[leg+"_mc"].Get('eff_mc_'+leg)
 
   # Load the inv. mass. efficiency (only mc)
-  f['mass7to18_mc'] = TFile("l1_masscut_eff_pt6_DY10to50.root","READ")
-  eff['mass7to18_mc'] =  f['mass7to18_mc'].Get("l1_masscut_eff_pt6_DY10to50")
+#  f['mass7to18_mc'] = TFile("l1_masscut_eff_pt6_DY10to50.root","READ")
+#  eff['mass7to18_mc'] =  f['mass7to18_mc'].Get("l1_masscut_eff_pt6_DY10to50")
 
-  # Load the correlation cuts efficiency (only mc)
-  f['corrCuts_mc'] = TFile("l1_corrCuts_eff_DY10to50.root","READ")
-  eff['corrCuts_mc'] = f['corrCuts_mc'].Get("l1_corrCuts_eff_DY10to50")
+#  # Load the correlation cuts efficiency (only mc)
+#  f['corrCuts_mc'] = TFile("l1_corrCuts_eff_DY10to50.root","READ")
+#  eff['corrCuts_mc'] = f['corrCuts_mc'].Get("l1_corrCuts_eff_DY10to50")
 
 
 
@@ -306,6 +306,16 @@ def fillTree():
     run[0] = t.run
     ls[0] = t.lumSec
     event[0] = t.event
+
+    print(type(t.vtxProb))
+
+    #vtxProb[0] = t.vtxProb
+    #valid[0] = t.valid
+    #lxy[0] = t.lxy
+    #lxyErr[0] = t.lxyErr
+    #sigLxy[0] = t.sigLxy
+
+
 
     if (injson(str(run[0]),ls[0])): L1_12_5_On[0] = 1
     else:  L1_12_5_On[0] = 0

@@ -198,6 +198,7 @@ class TreeMaker : public edm::one::EDAnalyzer<edm::one::SharedResources, edm::on
         // 4-vector of genparticles, and their PDG IDs            
         std::vector<TLorentzVector>  gens;
         std::vector<char>            gid;
+        std::vector<double>            gvtx;
 
         // Pileup information
         unsigned char                putrue, nvtx;
@@ -459,7 +460,7 @@ void TreeMaker::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
     muons    .clear(); mid.clear(); miso.clear();
     //electrons.clear(); eid.clear();
     jets     .clear(); jid.clear(); jbtag.clear();
-    gens     .clear(); gid.clear();
+    gens     .clear(); gid.clear(); gvtx.clear();
     midloose.clear();
     midsoft.clear();
     midmedium.clear();
@@ -576,26 +577,71 @@ void TreeMaker::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
         pat::MuonRef mref(muonsH, muons_iter - muonsH->begin());
         muonv.push_back(mref);
     }
-    if (not (muonv.size() == 2)) {
+    if (not (muonv.size() >= 2)) {
         if (applyDimuonFilter) return;
     }
     else sort(muonv.begin(), muonv.end(), muonSorter);
 
+  
+    /*  
     // Vertex Calculation
     if (not isGoodMuon(*muonv[0].get())) return;
     if (not isGoodMuon(*muonv[1].get())) return;
     auto kalmanMuMuVertexFit = vertexMuonsWithKalmanFitter(*muonv[0].get(), *muonv[1].get());
     kalmanMuMuVertexFit.postprocess(*beamSpot_);
     //cout << "Lxy of leading dimuon pair = " << kalmanMuMuVertexFit.lxy << endl;
+    */
+
+
+
+    // Vertex Calculation (Take best p-value pair)
+    float bestP = 1;
+    float bestLxy = 0;
+    float bestLxyErr = 0;
+    float bestSigLxy = 0;
+    bool bestValid = 0;
+    vector<int> bestMu = {0,0};
+    cout << "iter. start" << endl;
+    for (unsigned int i = 0; i<(sizeof(muonv)-1); i++){
+      cout << i << endl;
+      if (not isGoodMuon(*muonv[i].get())) continue;
+      for (unsigned int j = i+1; j<sizeof(muonv); j++){
+	cout << j <<endl;
+	if (not isGoodMuon(*muonv[j].get())) continue;
+	auto kalmanMuMuVertexFit = vertexMuonsWithKalmanFitter(*muonv[i].get(), *muonv[j].get());
+	kalmanMuMuVertexFit.postprocess(*beamSpot_);
+        cout << "new pair, mu " << i << "mu " << j << endl; 
+	//cout << "Lxy of leading dimuon pair = " << kalmanMuMuVertexFit.lxy << endl;
+	if (kalmanMuMuVertexFit.vtxProb < bestP){
+	  bestP = kalmanMuMuVertexFit.vtxProb;
+	  cout << "new best P value: " << bestP << endl;
+	  bestSigLxy = kalmanMuMuVertexFit.sigLxy;
+	  bestLxyErr = kalmanMuMuVertexFit.lxyErr;
+	  bestLxy = kalmanMuMuVertexFit.lxy;
+	  bestValid = kalmanMuMuVertexFit.valid;
+	  bestMu[0] = i;
+	  bestMu[1] = j;
+	}
+      }
+    }
+    if (bestMu[0] == 0 && bestMu[1] == 0) return;
+    vtxProb.push_back(bestP);
+    valid.push_back(bestValid);
+    lxy.push_back(bestLxy);
+    lxyErr.push_back(bestLxyErr);
+    sigLxy.push_back(bestSigLxy);
+
+    /*
     vtxProb.push_back(kalmanMuMuVertexFit.vtxProb);
     valid.push_back(kalmanMuMuVertexFit.valid);
     lxy.push_back(kalmanMuMuVertexFit.lxy);
     lxyErr.push_back(kalmanMuMuVertexFit.lxyErr);
     sigLxy.push_back(kalmanMuMuVertexFit.sigLxy);
     chiSq.push_back(kalmanMuMuVertexFit.chiSq);
-
-    m1Impact.push_back(muonv[0]->track().get()->dxy());
-    m2Impact.push_back(muonv[1]->track().get()->dxy());
+    */
+    m1Impact.push_back(muonv[bestMu[0]]->track().get()->dxy());
+    m2Impact.push_back(muonv[bestMu[1]]->track().get()->dxy());
+    cout << "passed muons" << endl;
 
     int nLoose=0;
     for (size_t i = 0; i < muonv.size(); i++) {
@@ -766,17 +812,14 @@ void TreeMaker::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
     if (isMC && gensH.isValid()) {
 
         for (auto gens_iter = gensH->begin(); gens_iter != gensH->end(); ++gens_iter) { 
-            if (gens_iter->pdgId() ==  23 || abs(gens_iter->pdgId()) == 24 || gens_iter->pdgId() == 25) {
-                TLorentzVector g4;
-                g4.SetPtEtaPhiM(gens_iter->pt(), gens_iter->eta(), gens_iter->phi(), gens_iter->mass());
-                gens.push_back(g4);
-                gid.push_back(char(gens_iter->pdgId()));
-            }
             if (abs(gens_iter->pdgId()) > 0.0 && abs(gens_iter->pdgId())==13 && gens_iter->fromHardProcessFinalState()) {
                 TLorentzVector g4;
                 g4.SetPtEtaPhiM(gens_iter->pt(), gens_iter->eta(), gens_iter->phi(), gens_iter->mass());
                 gens.push_back(g4);
                 gid.push_back(char(gens_iter->pdgId()));
+		double y = gens_iter->vy();
+		double x = gens_iter->vx();
+		gvtx.push_back(sqrt(pow(x,2) + pow(y,2)));
             }
 
         }
@@ -881,6 +924,7 @@ void TreeMaker::beginJob() {
     // Gen info
     tree->Branch("gens"                 , "std::vector<TLorentzVector>"  , &gens     , 32000, 0);
     tree->Branch("gid"                  , "std::vector<char>"            , &gid      );
+    tree->Branch("gvtx"                  , "std::vector<double>"            , &gvtx      );
 }
 
 void TreeMaker::endJob() {

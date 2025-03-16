@@ -43,6 +43,7 @@ Py8CSVReaderGun::Py8CSVReaderGun( edm::ParameterSet const& ps )
    fMaxProdRadius = pgun_params.getParameter<double>("MaxProdRadius"); // , 0.);
    fMakeDisplaced = pgun_params.getParameter<bool>("MakeDisplaced"); //, true);
    fNumParticlesPerEvent = pgun_params.getParameter<int>("NumParticlesPerEvent"); // 5
+   //fNumParticlesPerEvent = 5; // 5
    std::cout << "[Py8CSVReaderGun constructor] Begin reading CSV input file..." << std::endl;
    std::cout << "[Py8CSVReaderGun constructor] Filename: " << fFilename << std::endl;
    std::ifstream infile(fFilename);
@@ -71,7 +72,8 @@ bool Py8CSVReaderGun::generatePartonsAndHadronize()
    // (this is minimized by randomly sampling pluto list of events -- birthday problem)
    int randomNumber, count = 0;
    do {
-      randomNumber = (int)(30000 * randomEngine().flat()) * fNumParticlesPerEvent;
+     //randomNumber = (int)(30000 * randomEngine().flat()) * fNumParticlesPerEvent;
+      randomNumber = (int)(2000 * randomEngine().flat()) * fNumParticlesPerEvent;
       count++;
    }
    while (std::find(used_events.begin(), used_events.end(), randomNumber) != used_events.end() && count < 100);

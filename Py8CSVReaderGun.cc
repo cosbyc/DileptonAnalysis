@@ -73,7 +73,7 @@ bool Py8CSVReaderGun::generatePartonsAndHadronize()
    int randomNumber, count = 0;
    do {
      //randomNumber = (int)(30000 * randomEngine().flat()) * fNumParticlesPerEvent;
-      randomNumber = (int)(2000 * randomEngine().flat()) * fNumParticlesPerEvent;
+      randomNumber = (int)(100 * randomEngine().flat()) * fNumParticlesPerEvent;
       count++;
    }
    while (std::find(used_events.begin(), used_events.end(), randomNumber) != used_events.end() && count < 100);

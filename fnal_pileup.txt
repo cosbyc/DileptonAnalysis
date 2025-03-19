@@ -1,0 +1,15 @@
+/store/mc/Run3Summer21PrePremix/Neutrino_E-10_gun/PREMIX/Summer22_124X_mcRun3_2022_realistic_v11-v2/40010/f8cbd2c8-cfb4-4c8e-b92c-3598bf5aecc1.root
+/store/mc/Run3Summer21PrePremix/Neutrino_E-10_gun/PREMIX/Summer22_124X_mcRun3_2022_realistic_v11-v2/40010/f9082c02-f1d8-4aa7-9485-43e1a5db35f5.root
+/store/mc/Run3Summer21PrePremix/Neutrino_E-10_gun/PREMIX/Summer22_124X_mcRun3_2022_realistic_v11-v2/40010/f92f734c-685f-4371-ab14-b9d5928ddd23.root
+/store/mc/Run3Summer21PrePremix/Neutrino_E-10_gun/PREMIX/Summer22_124X_mcRun3_2022_realistic_v11-v2/40010/f98a383e-f40c-46c3-89e1-4bddd192a0aa.root
+/store/mc/Run3Summer21PrePremix/Neutrino_E-10_gun/PREMIX/Summer22_124X_mcRun3_2022_realistic_v11-v2/40010/fa7e6640-cf28-487a-bd7f-dd21420a236e.root
+/store/mc/Run3Summer21PrePremix/Neutrino_E-10_gun/PREMIX/Summer22_124X_mcRun3_2022_realistic_v11-v2/40010/fbb30e76-e552-4796-8b31-feba30e4ad9d.root
+/store/mc/Run3Summer21PrePremix/Neutrino_E-10_gun/PREMIX/Summer22_124X_mcRun3_2022_realistic_v11-v2/40010/fbfd4813-d8ab-463f-9a2c-d8094d9952c2.root
+/store/mc/Run3Summer21PrePremix/Neutrino_E-10_gun/PREMIX/Summer22_124X_mcRun3_2022_realistic_v11-v2/40010/fdec3472-d7d9-424a-82e3-3f919f618190.root
+/store/mc/Run3Summer21PrePremix/Neutrino_E-10_gun/PREMIX/Summer22_124X_mcRun3_2022_realistic_v11-v2/40010/fe007a46-ea6e-44e1-b803-33ab684a4f5c.root
+/store/mc/Run3Summer21PrePremix/Neutrino_E-10_gun/PREMIX/Summer22_124X_mcRun3_2022_realistic_v11-v2/40010/fe741db7-119c-4afb-9edf-f309ef9d4726.root
+/store/mc/Run3Summer21PrePremix/Neutrino_E-10_gun/PREMIX/Summer22_124X_mcRun3_2022_realistic_v11-v2/40010/fe798a85-098d-4e89-b952-afae1bb0fe16.root
+/store/mc/Run3Summer21PrePremix/Neutrino_E-10_gun/PREMIX/Summer22_124X_mcRun3_2022_realistic_v11-v2/40010/fe807dc3-6588-419e-af2f-3169fcef2f0a.root
+/store/mc/Run3Summer21PrePremix/Neutrino_E-10_gun/PREMIX/Summer22_124X_mcRun3_2022_realistic_v11-v2/40010/feb19e27-9174-4e28-bc28-58d03d108238.root
+/store/mc/Run3Summer21PrePremix/Neutrino_E-10_gun/PREMIX/Summer22_124X_mcRun3_2022_realistic_v11-v2/40010/ff40e8c2-f4e2-49d6-bf8b-6f5221299288.root
+/store/mc/Run3Summer21PrePremix/Neutrino_E-10_gun/PREMIX/Summer22_124X_mcRun3_2022_realistic_v11-v2/40010/ffcf8f55-86d9-4ed9-aed6-3cd342a019b4.root
